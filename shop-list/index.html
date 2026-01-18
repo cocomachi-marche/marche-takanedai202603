@@ -78,6 +78,8 @@
       display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; cursor: pointer;
       transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
       order: 2;
+      text-decoration: none;
+      color: inherit;
     }
     .card:active { transform: scale(0.98); }
     
@@ -100,7 +102,7 @@
       display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px;
       background: var(--soft); color: var(--muted); border: 1px solid rgba(0,0,0,.05);
     }
-    .small { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .small { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
 
 </style>
 </head>
@@ -108,7 +110,8 @@
   <header class="appbar">
     <div class="row">
       <div class="brand">
-        <img src="D:\GitHub\marche-takanedai202603\images\logo.png" alt="ココまちマルシェ" class="brand-logo" onerror="this.src='https://placehold.co/200x80/orange/white?text=Marche+Logo'">
+        <!-- ロゴパスも相対パスに修正 -->
+        <img src="images/logo.png" alt="ココまちマルシェ" class="brand-logo" onerror="this.src='https://placehold.co/200x80/orange/white?text=Marche+Logo'">
       </div>
     </div>
   </header>
@@ -137,10 +140,10 @@
     <!-- ショップカードセクション -->
     <section class="cards">
       
-      <!-- 1. 洋食堂バル369 (リンク先を 369.html に修正) -->
-      <article class="card" data-category="食べる 飲む" aria-label="洋食堂バル369" role="link" tabindex="0" onclick="location.href='369.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='369.html'}">
+      <!-- 1. 洋食堂バル369 -->
+      <article class="card" data-category="食べる 飲む" aria-label="洋食堂バル369" role="link" tabindex="0" onclick="location.href='./shops/369/index.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./shops/369/index.html'}">
         <div class="thumb" role="img" aria-label="洋食堂バル369">
-          <img src="D:\GitHub\marche-takanedai202603\images\shops\369\1.jpeg" alt="洋食堂バル369 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.src='https://placehold.co/200x200/orange/white?text=369+Image'">
+          <img src="images/shops/369/1.jpeg" alt="洋食堂バル369 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
         <div>
           <div class="title">洋食堂バル369</div>
@@ -152,10 +155,10 @@
         </div>
       </article>
 
-      <!-- 2. はんどめいど　みんみ (リンク先を mnm.html に修正) -->
-      <article class="card" data-category="日常生活" aria-label="はんどめいど　みんみ" role="link" tabindex="0" onclick="location.href='mnm.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='mnm.html'}">
+      <!-- 2. はんどめいど　みんみ -->
+      <article class="card" data-category="日常生活" aria-label="はんどめいど　みんみ" role="link" tabindex="0" onclick="location.href='./shops/mnm/index.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./shops/mnm/index.html'}">
         <div class="thumb" role="img" aria-label="はんどめいど　みんみ">
-          <img src="D:\GitHub\marche-takanedai202603\images\shops\mnm\1.jpeg" alt="はんどめいど　みんみ カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <img src="images/shops/mnm/1.jpeg" alt="はんどめいど　みんみ カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
         <div>
           <div class="title">はんどめいど　みんみ</div>
@@ -167,10 +170,10 @@
         </div>
       </article>
 
-      <!-- 3. スズキオート京葉株式会社 (リンク先を szk.html に修正) -->
-      <article class="card" data-category="ベビーキッズ 歓迎,バリアフリー,日常生活" aria-label="スズキオート京葉株式会社" role="link" tabindex="0" onclick="location.href='szk.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='szk.html'}">
+      <!-- 3. スズキオート京葉株式会社 -->
+      <article class="card" data-category="ベビーキッズ 歓迎,バリアフリー,日常生活" aria-label="スズキオート京葉株式会社" role="link" tabindex="0" onclick="location.href='./shops/szk/index.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./shops/szk/index.html'}">
         <div class="thumb" role="img" aria-label="スズキオート京葉株式会社">
-          <img src="D:\GitHub\marche-takanedai202603\images\shops\szk\1.jpg" alt="スズキオート京葉株式会社 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <img src="images/shops/szk/1.jpg" alt="スズキオート京葉株式会社 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
         <div>
           <div class="title">スズキオート京葉株式会社</div>
