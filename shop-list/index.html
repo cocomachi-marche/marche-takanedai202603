@@ -75,11 +75,12 @@
     }
     .card {
       background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-1); padding: 12px;
-      display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; cursor: pointer;
+      display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center;
       transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
       order: 2;
       text-decoration: none;
       color: inherit;
+      -webkit-tap-highlight-color: transparent;
     }
     .card:active { transform: scale(0.98); }
     
@@ -110,7 +111,7 @@
   <header class="appbar">
     <div class="row">
       <div class="brand">
-        <!-- ロゴパスを相対パス「images/shops/logo.png」に修正しました -->
+        <!-- index.htmlと同じ階層の images フォルダを参照 -->
         <img src="images/shops/logo.png" alt="ココまちマルシェ" class="brand-logo" onerror="this.src='https://placehold.co/200x80/orange/white?text=Marche+Logo'">
       </div>
     </div>
@@ -141,7 +142,7 @@
     <section class="cards">
       
       <!-- 1. 洋食堂バル369 -->
-      <article class="card" data-category="食べる 飲む" aria-label="洋食堂バル369" role="link" tabindex="0" onclick="location.href='./shops/369/index.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./shops/369/index.html'}">
+      <a href="./369.html" class="card" data-category="食べる 飲む" aria-label="洋食堂バル369">
         <div class="thumb" role="img" aria-label="洋食堂バル369">
           <img src="images/shops/369/1.jpeg" alt="洋食堂バル369 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
@@ -153,10 +154,10 @@
           </div>
           <div class="small">高根公団駅近のアットホームな飲食店</div>
         </div>
-      </article>
+      </a>
 
       <!-- 2. はんどめいど　みんみ -->
-      <article class="card" data-category="日常生活" aria-label="はんどめいど　みんみ" role="link" tabindex="0" onclick="location.href='./shops/mnm/index.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./shops/mnm/index.html'}">
+      <a href="./mnm.html" class="card" data-category="日常生活" aria-label="はんどめいど　みんみ">
         <div class="thumb" role="img" aria-label="はんどめいど　みんみ">
           <img src="images/shops/mnm/1.jpeg" alt="はんどめいど　みんみ カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
@@ -168,11 +169,12 @@
           </div>
           <div class="small">かぎ針編みで制作した編みぐるみ販売</div>
         </div>
-      </article>
+      </a>
 
       <!-- 3. スズキオート京葉株式会社 -->
-      <article class="card" data-category="ベビーキッズ 歓迎,バリアフリー,日常生活" aria-label="スズキオート京葉株式会社" role="link" tabindex="0" onclick="location.href='./shops/szk/index.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./shops/szk/index.html'}">
+      <a href="./szk.html" class="card" data-category="ベビーキッズ 歓迎,バリアフリー,日常生活" aria-label="スズキオート京葉株式会社">
         <div class="thumb" role="img" aria-label="スズキオート京葉株式会社">
+          <!-- szkの画像拡張子は 1.jpg -->
           <img src="images/shops/szk/1.jpg" alt="スズキオート京葉株式会社 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
         <div>
@@ -183,7 +185,7 @@
           </div>
           <div class="small">車のお医者さんです。みんな相談に来てね！</div>
         </div>
-      </article>
+      </a>
 
     </section>
   </main>
@@ -194,7 +196,8 @@
       const cards = document.querySelectorAll('.card');
       
       chips.forEach(chip => {
-        chip.addEventListener('click', () => {
+        chip.addEventListener('click', (e) => {
+          e.preventDefault();
           const category = chip.innerText.trim();
           const isActive = chip.classList.contains('active');
 
