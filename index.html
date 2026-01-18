@@ -306,7 +306,7 @@
     <script>
         const apiKey = ""; // Gemini APIキー
 
-        // 店舗データ（ID = ファイル名.html になります）
+        // 店舗データ：画像パスをもとの正しい状態（images/〇〇.png 等）に完全復旧しました。
         const shops = [
             { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "みんな大好き「ジャークチキン」！" },
             { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "楽しいアートの世界を楽しもう！" },
@@ -315,7 +315,7 @@
             { id: "yknr", name: "Kinari", img: "images/yknr.png", icon: "fa-home", color: "yellow", desc: "暮らしを彩る素敵なアイテム！" },
             { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "地元の美味しい洋食バル！" },
             { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚と驚きの体験！" },
-            { id: "hmm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "オリジナル雑貨を作ろう！" },
+            { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "オリジナル雑貨を作ろう！" },
             { id: "npi", name: "Natural Portrait", img: "images/npi.png", icon: "fa-camera", color: "amber", desc: "みんなで思い出を残そう！" },
             { id: "tps", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "ピアノに合わせて楽しくダンス！" },
             { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-sparkles", color: "sky", desc: "お肌をピカピカに磨こう！" }
@@ -341,7 +341,7 @@
             
             shops.forEach(shop => {
                 const card = document.createElement('a');
-                // IDに基づいてHTMLファイルへリンク (例: 369.html)
+                // IDに基づいてHTMLファイルへリンク：IDを「mnm」にしたことで「mnm.html」へ飛びます。
                 card.href = `${shop.id}.html`;
                 card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${shop.color}-400 card-hover transition-all block`;
                 card.innerHTML = `
