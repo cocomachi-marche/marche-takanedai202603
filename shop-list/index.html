@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#FAF6F0">
+  <title>ココまちマルシェ | ショップリスト</title>
+  <meta name="description" content="近くの人気ショップ情報を、サクッと見つける！">
+  <style>
+    :root {
+      --bg: #FAF6F0;
+      --surface: #FFFFFF;
+      --ink: #2B2B2B;
+      --muted: #5B5B5B;
+      --brand: #e67e22; /* Marche Orange */
+      --accent: #CD6E5A;
+      --soft: #EEE6DA;
+      --radius: 14px;
+      --r-small: 10px;
+      --gap-4: 16px;
+      --gap-5: 24px;
+      --shadow-1: 0 1px 2px rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.06);
+      --maxw: 480px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.7; letter-spacing: .01em; -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gap-4) 80px; }
+    
+    /* Header */
+    .appbar {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--surface);
+      border-bottom: 1px solid rgba(0,0,0,.04);
+    }
+    .appbar .row {
+      max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gap-4); height: 64px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-logo { height: 48px; width: auto; display: block; }
+
+    /* Hero */
+    .hero { padding: var(--gap-5) 0; text-align: center; }
+    h1 { font-size: 22px; line-height: 1.35; margin: 0 0 8px; color: var(--brand); }
+    .sub { color: var(--muted); font-size: 14px; margin: 0; }
+
+    /* Chips (Categories) */
+    .chips { display: flex; gap: 8px; overflow-x: auto; padding: 12px 8px; -webkit-overflow-scrolling: touch; margin: 0 -16px; }
+    .chips::before, .chips::after { content: ''; flex: 0 0 8px; }
+    .chip {
+      flex: 0 0 auto; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(0,0,0,.08);
+      background: #fff; box-shadow: var(--shadow-1); font-weight: 600; font-size: 13px; cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .chip.active {
+      background: var(--brand);
+      color: #fff;
+      border-color: var(--brand);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
+    }
+
+    /* Cards */
+    .cards { 
+      display: flex;
+      flex-direction: column;
+      gap: 12px; 
+      margin-top: 12px; 
+    }
+    .card {
+      background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-1); padding: 12px;
+      display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+      order: 2;
+    }
+    .card:active { transform: scale(0.98); }
+    
+    .card.highlight {
+      order: 1;
+      border: 1px solid rgba(230, 126, 34, 0.2);
+    }
+    .card.dimmed {
+      opacity: 0.6;
+    }
+
+    .thumb {
+      width: 92px; height: 92px; border-radius: var(--r-small);
+      background: #f4f4f4; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .title { font-weight: 800; font-size: 16px; margin-bottom: 4px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 6px; color: var(--muted); font-size: 12px; }
+    .badge {
+      display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px;
+      background: var(--soft); color: var(--muted); border: 1px solid rgba(0,0,0,.05);
+    }
+    .small { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+</style>
+</head>
+<body>
+  <header class="appbar">
+    <div class="row">
+      <div class="brand">
+        <img src="D:\GitHub\marche-takanedai202603\images\logo.png" alt="ココまちマルシェ" class="brand-logo" onerror="this.src='https://placehold.co/200x80/orange/white?text=Marche+Logo'">
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>今日の“ちょっと良い”、すぐ見つかる。</h1>
+      <p class="sub">近くの人気ショップ情報を、サクッと見つける！</p>
+    </section>
+
+    <!-- カテゴリ絞り込みチップ -->
+    <section id="catalog">
+      <div class="chips">
+        <button class="chip">食べる 飲む</button>
+        <button class="chip">ビューティー 健康</button>
+        <button class="chip">ギフト</button>
+        <button class="chip">デリバリー</button>
+        <button class="chip">学ぶ</button>
+        <button class="chip">ベビーキッズ 歓迎</button>
+        <button class="chip">バリアフリー</button>
+        <button class="chip">日常生活</button>
+        <button class="chip">お悩み解決</button>
+      </div>
+    </section>
+
+    <!-- ショップカードセクション -->
+    <section class="cards">
+      
+      <!-- 1. 洋食堂バル369 (リンク先を 369.html に修正) -->
+      <article class="card" data-category="食べる 飲む" aria-label="洋食堂バル369" role="link" tabindex="0" onclick="location.href='369.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='369.html'}">
+        <div class="thumb" role="img" aria-label="洋食堂バル369">
+          <img src="D:\GitHub\marche-takanedai202603\images\shops\369\1.jpeg" alt="洋食堂バル369 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.src='https://placehold.co/200x200/orange/white?text=369+Image'">
+        </div>
+        <div>
+          <div class="title">洋食堂バル369</div>
+          <div class="meta">
+            <span class="badge">初回10%OFF</span>
+            <span>寄り道したくなるお店</span>
+          </div>
+          <div class="small">高根公団駅近のアットホームな飲食店</div>
+        </div>
+      </article>
+
+      <!-- 2. はんどめいど　みんみ (リンク先を mnm.html に修正) -->
+      <article class="card" data-category="日常生活" aria-label="はんどめいど　みんみ" role="link" tabindex="0" onclick="location.href='mnm.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='mnm.html'}">
+        <div class="thumb" role="img" aria-label="はんどめいど　みんみ">
+          <img src="D:\GitHub\marche-takanedai202603\images\shops\mnm\1.jpeg" alt="はんどめいど　みんみ カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="title">はんどめいど　みんみ</div>
+          <div class="meta">
+            <span class="badge">オーダー可</span>
+            <span>編みぐるみ販売</span>
+          </div>
+          <div class="small">かぎ針編みで制作した編みぐるみ販売</div>
+        </div>
+      </article>
+
+      <!-- 3. スズキオート京葉株式会社 (リンク先を szk.html に修正) -->
+      <article class="card" data-category="ベビーキッズ 歓迎,バリアフリー,日常生活" aria-label="スズキオート京葉株式会社" role="link" tabindex="0" onclick="location.href='szk.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='szk.html'}">
+        <div class="thumb" role="img" aria-label="スズキオート京葉株式会社">
+          <img src="D:\GitHub\marche-takanedai202603\images\shops\szk\1.jpg" alt="スズキオート京葉株式会社 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="title">スズキオート京葉株式会社</div>
+          <div class="meta">
+            <span class="badge">新車購入時部品３万円、創業55年地域密着企業</span>
+            <span>地域密着の車屋です</span>
+          </div>
+          <div class="small">車のお医者さんです。みんな相談に来てね！</div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const chips = document.querySelectorAll('.chip');
+      const cards = document.querySelectorAll('.card');
+      
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const category = chip.innerText.trim();
+          const isActive = chip.classList.contains('active');
+
+          chips.forEach(c => c.classList.remove('active'));
+          cards.forEach(card => {
+            card.classList.remove('highlight', 'dimmed');
+            card.style.order = "2";
+          });
+
+          if (!isActive) {
+            chip.classList.add('active');
+            cards.forEach(card => {
+              const cardCats = card.getAttribute('data-category') || "";
+              const catArray = cardCats.split(',').map(s => s.trim());
+              if (catArray.includes(category)) {
+                card.classList.add('highlight');
+                card.style.order = "1";
+              } else {
+                card.classList.add('dimmed');
+              }
+            });
+          }
+          window.scrollTo({ top: document.getElementById('catalog').offsetTop - 80, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
