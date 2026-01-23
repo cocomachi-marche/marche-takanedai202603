@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アンケート</title>
+    <style>
+        /* Imisusire y'imbuga (CSS Styling) */
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+        body {
+            font-family: 'Mochiy Pop One', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #FFF8E1;
+            color: #5D4037;
+        }
+
+        #question-container {
+            text-align: center;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        }
+
+        #question {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        #options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        #options button {
+            padding: 15px 25px;
+            font-size: 1.1em;
+            font-family: 'Mochiy Pop One', sans-serif;
+            cursor: pointer;
+            border: none;
+            border-radius: 30px;
+            background-color: #FFB74D;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+
+        #options button:hover {
+            background-color: #FFA726;
+            transform: translateY(-3px);
+        }
+
+        input[type="tel"] {
+            padding: 15px;
+            font-size: 1.2em;
+            font-family: 'Mochiy Pop One', sans-serif;
+            border: 2px solid #FFB74D;
+            border-radius: 30px;
+            text-align: center;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .line-button {
+            display: inline-block;
+            padding: 15px 40px;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #06C755;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        /* ロゴ画像用のスタイル */
+        .success-logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="question-container">
+        <p id="question">読み込み中...</p>
+        <div id="options"></div>
+    </div>
+
+    <script>
+        /**
+         * Logic yo gucunga amakuru (JavaScript Logic)
+         */
+        const questionContainer = document.getElementById('question-container');
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+
+        // 新しいGASのURLに更新したよ！
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbwDrkGgdW1S5T7MHxv0hcVLDDOsdi4BklbtrrZQp2qtBvJ9qC77iszhQIjA2q8c5nl_/exec";
+
+        const answers = {
+            postalCode: null,
+            adults: null,
+            childrenCount: null,
+            childrenGrades: [],
+        };
+
+        let questionQueue = [];
+        let currentChild = 1;
+
+        const initialQuestions = [
+            { key: 'postalCode', text: 'お住まいの郵便番号を教えてください。', type: 'text' },
+            { key: 'adults', text: '大人の人数を教えてください。', type: 'choice', options: [1,2,3,4,5,6] },
+            { key: 'childrenCount', text: 'お子さんの人数を教えてください。', type: 'choice', options: [0,1,2,3,4,5,6,7] }
+        ];
+
+        function displayQuestion(q) {
+            questionElement.textContent = typeof q.text === 'function' ? q.text(currentChild) : q.text;
+            optionsElement.innerHTML = '';
+
+            if (q.type === 'text') {
+                const input = document.createElement('input');
+                input.type = 'tel';
+                input.placeholder = '1234567';
+                optionsElement.appendChild(input);
+
+                const btn = document.createElement('button');
+                btn.textContent = '次へ';
+                btn.onclick = () => {
+                    if (input.value.length >= 7) handleAnswer(q.key, input.value);
+                    else alert('郵便番号を入力してください');
+                };
+                optionsElement.appendChild(btn);
+            } else {
+                q.options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.textContent = opt;
+                    btn.onclick = () => handleAnswer(q.key, opt);
+                    optionsElement.appendChild(btn);
+                });
+            }
+        }
+
+        function handleAnswer(key, value) {
+            if (key === 'childGrade') {
+                answers.childrenGrades.push(value);
+                currentChild++;
+            } else {
+                answers[key] = value;
+            }
+
+            if (key === 'childrenCount' && value > 0) {
+                for (let i = 0; i < value; i++) {
+                    questionQueue.push({
+                        key: 'childGrade',
+                        text: (n) => `${n}人目のお子さんの学年は？`,
+                        type: 'choice',
+                        options: ['未就学児', '小1', '小2', '小3', '小4', '小5', '小6', '中学生以上']
+                    });
+                }
+            }
+
+            if (questionQueue.length > 0) {
+                displayQuestion(questionQueue.shift());
+            } else {
+                submitData();
+            }
+        }
+
+        async function submitData() {
+            questionContainer.innerHTML = '<p>送信中...</p>';
+            try {
+                // Kohereza amakuru kuri GAS (Send to GAS)
+                await fetch(GAS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: JSON.stringify(answers)
+                });
+                showResult();
+            } catch (e) {
+                questionContainer.innerHTML = '<p>エラーが発生しました。</p>';
+            }
+        }
+
+        function showResult() {
+            questionContainer.innerHTML = `
+                <img src="images/rogo.png" alt="ロゴ" class="success-logo" onerror="this.style.display='none'">
+                <p style="font-size: 1.5em;">ご協力ありがとうございました！</p>
+                <p>この画面をスタッフに見せてね！</p>
+                <a href="https://lin.ee/0pDn2rc" class="line-button">LINEで友だち登録</a>
+            `;
+        }
+
+        window.onload = () => {
+            questionQueue = [...initialQuestions];
+            displayQuestion(questionQueue.shift());
+        };
+    </script>
+</body>
+</html>

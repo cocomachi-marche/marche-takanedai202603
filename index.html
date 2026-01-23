@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ココまちマルシェ in 高根台 | 3/22(日)開催！</title>
-    <meta name="description" content="3月22日(日) 高根台公民館で開催！車に落書き！？消防士体験！？子どもの「やりたい！」が全部叶う、最高の体験型マルシェ！">
+    <meta name="description" content="3月22日(日) 高根台公民館で開催！車に落書き！？消防士体験！？子どもの「やりたい！」が全部叶う,最高の体験型マルシェ！">
     
     <!-- 高速化：メイン画像をプリロード -->
     <link rel="preload" as="image" href="images/header.png">
@@ -300,19 +300,20 @@
     <footer class="bg-yellow-400 py-16 px-4 text-center text-white mt-12">
         <h2 class="text-2xl font-black mb-4 tracking-widest">3月22日は、高根台公民館に全員集合！</h2>
         <p class="text-white font-bold italic mb-4">楽しい体験がいっぱい待ってるよ！</p>
+        <p class="text-white font-bold text-sm mb-4">後援：船橋市・船橋市教育委員会</p>
         <div class="font-bold text-sm mt-8">&copy; 2026 ココまちマルシェ実行委員会</div>
     </footer>
 
     <script>
         const apiKey = ""; // Gemini APIキー
 
-        // 店舗データ：画像パスをもとの正しい状態（images/〇〇.png 等）に完全復旧しました。
+        // 店舗データ
         const shops = [
             { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "みんな大好き「ジャークチキン」！" },
             { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "楽しいアートの世界を楽しもう！" },
             { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分だけの作品を形にしてみよう。" },
             { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "住んでみたいお家のデザイン体験！" },
-            { id: "yknr", name: "Kinari", img: "images/yknr.png", icon: "fa-home", color: "yellow", desc: "暮らしを彩る素敵なアイテム！" },
+            { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-home", color: "yellow", desc: "暮らしを彩る素敵なアイテム！" },
             { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "地元の美味しい洋食バル！" },
             { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚と驚きの体験！" },
             { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "オリジナル雑貨を作ろう！" },
@@ -341,7 +342,6 @@
             
             shops.forEach(shop => {
                 const card = document.createElement('a');
-                // IDに基づいてHTMLファイルへリンク：IDを「mnm」にしたことで「mnm.html」へ飛びます。
                 card.href = `${shop.id}.html`;
                 card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${shop.color}-400 card-hover transition-all block`;
                 card.innerHTML = `
@@ -354,19 +354,46 @@
                 grid.appendChild(card);
             });
 
-            // 絵文字カテゴリの追加体験
+            // 追加体験データ
             const extra = [
-                { id: "yoga", name: "キッズヨガ教室", icon: "🧘", color: "violet", desc: "親子でリフレッシュ！" },
+                { id: "oyk", name: "お好み焼き きんいろ", img: "images/oyk.png", color: "orange", desc: "ふわとろお好み焼き！" },
                 { id: "pottery", name: "陶芸・土遊び", icon: "🏺", color: "orange", desc: "土の感触で器作り！" },
                 { id: "nail", name: "こどもネイル", icon: "💅", color: "pink", desc: "指先をキラキラデコ！" },
-                { id: "flower", name: "花アレンジ", icon: "💐", color: "emerald", desc: "素敵な飾り作り！" }
+                { id: "flower", name: "花アレンジ", icon: "💐", color: "emerald", desc: "素敵な飾り作り！" },
+                { id: "wood", name: "木工ワーク", icon: "🔨", color: "amber", desc: "トントン叩いて作ろう！" },
+                { id: "slime", name: "スライム作り", img: "images/ths.png", color: "purple", desc: "東邦大学 ボランティア部" },
+                { id: "boccia", name: "ボッチャ体験", img: "images/orgmb.jpeg", color: "blue", desc: "おりがみ" },
+                { id: "bamboo", name: "竹明かりアートづくり", img: "images/gbt.png", color: "red", desc: "グリーンベース" },
+                { id: "puppet", name: "人形劇", img: "images/ngg.jpg", color: "pink", desc: "船橋地区アマチュア人形劇連絡会" }
             ];
-            extra.forEach(item => {
-                const card = document.createElement('a');
-                card.href = `${item.id}.html`;
-                card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-300 card-hover transition-all block`;
+            extra.forEach((item, index) => {
+                // カタログの4行目（16枠目 = shops11個 + extraの5個目）の後に挿入
+                if (index === 5) {
+                    const heading = document.createElement('h2');
+                    heading.className = "text-2xl md:text-3xl font-black mb-8 col-span-2 md:col-span-4 mt-12 text-center md:text-left rainbow-text";
+                    heading.textContent = "協力グループ";
+                    grid.appendChild(heading);
+                }
+
+                // 協力グループ直下の4枠（index 5〜8）はリンクなし・ホバーなしのdivにする
+                const isDisplayOnly = index >= 5;
+                const card = document.createElement(isDisplayOnly ? 'div' : 'a');
+                
+                if (!isDisplayOnly) {
+                    card.href = `${item.id}.html`;
+                }
+
+                const hoverClass = isDisplayOnly ? '' : 'card-hover transition-all cursor-pointer';
+                card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-300 block ${hoverClass}`;
+                
+                const media = item.img 
+                    ? `<div class="aspect-square bg-${item.color}-50 overflow-hidden rounded-xl mb-3">
+                        <img src="${item.img}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
+                       </div>`
+                    : `<div class="aspect-square bg-${item.color}-50 flex items-center justify-center rounded-xl mb-3 text-2xl">${item.icon}</div>`;
+
                 card.innerHTML = `
-                    <div class="aspect-square bg-${item.color}-50 flex items-center justify-center rounded-xl mb-3 text-2xl">${item.icon}</div>
+                    ${media}
                     <h3 class="font-black text-sm">${item.name}</h3>
                     <p class="text-[10px] text-gray-500 mt-1 font-bold">${item.desc}</p>
                 `;
@@ -374,7 +401,6 @@
             });
         }
 
-        // ページ読み込み時またはハッシュ変更時にカタログ画面へジャンプする処理
         const handleHashChange = () => {
             if (window.location.hash === '#catalog') {
                 switchView('shops');
@@ -383,13 +409,11 @@
         window.addEventListener('DOMContentLoaded', handleHashChange);
         window.addEventListener('hashchange', handleHashChange);
 
-        // スクロール検知
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 
-        // 通信リトライ関数
         async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
             try {
                 const response = await fetch(url, options);
@@ -402,7 +426,6 @@
             }
         }
 
-        // AIプラン作成
         async function generatePlan() {
             const age = document.getElementById('child-age').value;
             const mood = document.getElementById('child-mood').value;

@@ -81,6 +81,7 @@
       text-decoration: none;
       color: inherit;
       -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
     }
     .card:active { transform: scale(0.98); }
     
@@ -111,7 +112,6 @@
   <header class="appbar">
     <div class="row">
       <div class="brand">
-        <!-- index.htmlと同じ階層の images フォルダを参照 -->
         <img src="images/shops/logo.png" alt="ココまちマルシェ" class="brand-logo" onerror="this.src='https://placehold.co/200x80/orange/white?text=Marche+Logo'">
       </div>
     </div>
@@ -174,7 +174,6 @@
       <!-- 3. スズキオート京葉株式会社 -->
       <a href="./szk.html" class="card" data-category="ベビーキッズ 歓迎,バリアフリー,日常生活" aria-label="スズキオート京葉株式会社">
         <div class="thumb" role="img" aria-label="スズキオート京葉株式会社">
-          <!-- szkの画像拡張子は 1.jpg -->
           <img src="images/shops/szk/1.jpg" alt="スズキオート京葉株式会社 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
         </div>
         <div>
@@ -186,6 +185,68 @@
           <div class="small">車のお医者さんです。みんな相談に来てね！</div>
         </div>
       </a>
+
+      <!-- 4. Cafe Kinari (ID: knr) -->
+      <article class="card" data-category="食べる 飲む, ビューティー 健康" aria-label="Cafe Kinari" role="link" tabindex="0" onclick="location.href='./knr.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./knr.html'}">
+        <div class="thumb" role="img" aria-label="Cafe Kinari">
+          <img src="images/shops/knr/1.jpg" alt="Cafe Kinari カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="title">Cafe Kinari</div>
+          <div class="meta">
+            <span class="badge">バインミー100円off</span>
+            <span>静かなご褒美</span>
+            <span>食べる 飲む</span>
+            <span>ビューティー 健康</span>
+          </div>
+          <div class="small">心ほどける小さなカフェ</div>
+        </div>
+      </article>
+
+      <!-- 5. お好み焼き　きんいろ (ID: oyk) -->
+      <article class="card" data-category="食べる 飲む" aria-label="お好み焼き　きんいろ" role="link" tabindex="0" onclick="location.href='./oyk.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./oyk.html'}">
+        <div class="thumb" role="img" aria-label="お好み焼き　きんいろ">
+          <img src="images/shops/oyk/1.png" alt="お好み焼き　きんいろ カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="title">お好み焼き　きんいろ</div>
+          <div class="meta">
+            <span class="badge">予約可</span>
+            <span>自家製出汁たっぷり</span>
+          </div>
+          <div class="small">たっぷりキャベツのふわっふわお好み焼き</div>
+        </div>
+      </article>
+
+      <!-- 6. 田中美穂ピアノ教室 (ID: tmp) -->
+      <article class="card" data-category="学ぶ" aria-label="田中美穂ピアノ教室" role="link" tabindex="0" onclick="location.href='./tmp.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./tmp.html'}">
+        <div class="thumb" role="img" aria-label="田中美穂ピアノ教室">
+          <img src="images/shops/tmp/1.jpg" alt="田中美穂ピアノ教室 カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="title">田中美穂ピアノ教室</div>
+          <div class="meta">
+            <span class="badge">無料体験レッスン</span>
+            <span>みんな音楽家</span>
+          </div>
+          <div class="small">リズム遊びをしながら楽器に触れてみよう</div>
+        </div>
+      </article>
+
+      <!-- 7. 耳つぼジュエリー Kinari (ID: yknr) -->
+      <article class="card" data-category="日常生活" aria-label="耳つぼジュエリー Kinari" role="link" tabindex="0" onclick="location.href='./yknr.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='./yknr.html'}">
+        <div class="thumb" role="img" aria-label="耳つぼジュエリー Kinari">
+          <img src="images/shops/yknr/1.jpeg" alt="耳つぼジュエリー Kinari カード画像" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="title">耳つぼジュエリー Kinari</div>
+          <div class="meta">
+            <span class="badge">キレイなジュエリー</span>
+            <span>ピアス感覚</span>
+          </div>
+          <div class="small">耳つぼに貼るだけで体感できます。</div>
+        </div>
+      </article>
 
     </section>
   </main>
