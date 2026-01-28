@@ -106,15 +106,11 @@
 
     <!-- 【画面：ホーム】 -->
     <div id="home-view">
-        <!-- ヒーローセクション -->
         <header class="relative pt-12 pb-16 text-center overflow-hidden bg-gray-800 min-h-[550px] flex flex-col justify-center items-center group">
             <div class="absolute inset-0 z-0 overflow-hidden">
                 <img id="header-bg" src="images/header.png" alt="ヘッダー背景" 
                      class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-110" 
-                     fetchpriority="high" 
-                     loading="eager" 
-                     decoding="sync"
-                     onerror="this.src='https://placehold.co/1200x800/3b82f6/white?text=%E3%82%B3%E3%82%B3%E3%81%BE%E3%81%A1%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7%0Aimages/header.png';">
+                     onerror="this.src='https://placehold.co/1200x800/3b82f6/white?text=%E3%82%B3%E3%82%B3%E3%81%BE%E3%81%A1%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7';">
                 <div class="absolute inset-0 bg-black/40 z-10"></div>
             </div>
 
@@ -122,23 +118,19 @@
                 <p class="text-white font-black text-xl md:text-2xl mb-4 bg-pink-500 inline-block px-6 py-2 rounded-full transform -rotate-2 shadow-xl border-2 border-white animate-float">
                     高根台公民館がテーマパークに！？
                 </p>
-                
                 <h1 class="font-hand text-4xl md:text-7xl font-black text-white leading-tight mb-4 text-shadow-pop transform scale-100 hover:scale-105 transition duration-300">
                     『体験型』マルシェに<br>
                     <span class="text-yellow-300">全員集合〜！</span>
                 </h1>
-                
                 <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 inline-block shadow-2xl max-w-md mx-auto w-full mt-4 border-4 border-yellow-400">
                     <p class="font-black text-gray-700 text-xl md:text-2xl mb-1">📅 2026.3.22 (日)</p>
                     <p class="font-black text-gray-700 text-lg md:text-xl mb-2">⏰ 10:00 〜 15:00</p>
                     <p class="font-black text-gray-600 text-lg">📍 高根台公民館</p>
                 </div>
-
                 <div class="mt-6 flex justify-center">
-                    <img src="images/logo.png" alt="ココまちマルシェロゴ" class="h-20 md:h-32 object-contain logo-blend animate-float" style="animation-delay: 0.5s;" onerror="this.style.display='none';">
+                    <img src="images/logo.png" alt="ココまちマルシェロゴ" class="h-20 md:h-32 object-contain logo-blend animate-float" onerror="this.style.display='none';">
                 </div>
             </div>
-            
             <div class="absolute bottom-0 w-full leading-none text-white z-20">
                 <svg class="block w-full h-8 md:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FFFDF5"></path>
@@ -146,7 +138,6 @@
             </div>
         </header>
 
-        <!-- メッセージ -->
         <section class="py-12 px-4 bg-pattern reveal-on-scroll">
             <div class="container mx-auto max-w-3xl text-center">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-700 mb-6">みんなでマルシェにいこう！😄</h2>
@@ -155,43 +146,40 @@
                     「せっかくの休み、子どもに何か<span class="text-pink-500 font-bold">普段できない体験</span>をさせたい！」<br>
                     <p class="text-xl md:text-2xl font-bold text-blue-600 mt-4">その悩み、「ココまちマルシェ」が解決します！</p>
                 </div>
-                <p class="mt-8 text-xl font-bold text-gray-700">
-                    ただのマルシェじゃない！<br>
-                    <span class="text-3xl text-orange-500 font-black" style="background: linear-gradient(transparent 60%, #fef08a 60%);">普段できない「体験」</span>がここにある！
-                </p>
             </div>
         </section>
 
-        <!-- コンテンツ紹介 -->
         <section class="py-16 px-4 bg-yellow-50 relative pb-16">
             <div class="container mx-auto max-w-4xl">
+                <!-- 車に落書きセクション -->
                 <div class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-purple-500 reveal-on-scroll">
                     <div class="bg-purple-500 text-white text-center py-2 font-black tracking-widest">★超目玉イベント★</div>
                     <div class="md:flex">
                         <div class="md:w-1/2 h-64 bg-gray-200 overflow-hidden relative">
-                            <img src="images/car.png" alt="車に落書き" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://placehold.co/600x400/e9d5ff/6b21a8?text=images/car.png';">
+                            <img src="images/car.png" alt="車に落書き" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e9d5ff/6b21a8?text=images/car.png';">
                         </div>
                         <div class="p-6 md:w-1/2 flex flex-col justify-center">
                             <h3 class="text-2xl font-black text-purple-600 mb-3 flex items-center"><span class="text-3xl mr-2">🎨</span> 車に落書きしちゃおう！</h3>
                             <p class="text-gray-600 font-bold mb-4">本物の車をキャンバスに、思う存分お絵描きタイム！今日だけは特別！</p>
-                            <p class="text-sm bg-purple-50 text-purple-700 p-3 rounded-lg font-bold">📸 カラフルになった車と記念撮影しよう！</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-red-500 reveal-on-scroll">
+                <!-- 船橋市消防局 東消防署 セクション（フロントページ：fire.png） -->
+                <a href="https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" target="_blank" rel="noopener noreferrer" class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-red-500 reveal-on-scroll block card-hover transition-all duration-300">
                     <div class="md:flex flex-row-reverse">
                         <div class="md:w-1/2 h-64 bg-red-100 overflow-hidden relative">
-                            <img src="images/fire.png" alt="消防士体験" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://placehold.co/600x400/fecaca/991b1b?text=images/fire.png';">
+                            <img src="images/fire.png" alt="消防士体験" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/fecaca/991b1b?text=images/fire.png';">
                         </div>
                         <div class="p-6 md:w-1/2 flex flex-col justify-center">
                             <h3 class="text-2xl font-black text-red-600 mb-3 flex items-center"><span class="text-3xl mr-2">👨‍🚒</span> 憧れのヒーロー登場！</h3>
-                            <p class="text-gray-600 font-bold mb-4">消防士さんと一緒に消火器の模擬体験！本物の迫力を肌で感じよう。</p>
+                            <p class="text-gray-600 font-bold mb-4">船橋市消防局 東消防署の消防士さんと一緒に消火器の模擬体験！本物の迫力を肌で感じよう。</p>
+                            <p class="text-xs text-gray-400 font-bold italic">協力：船橋市消防局 東消防署</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="mt-12 text-center max-w-sm mx-auto reveal-on-scroll">
+                <div class="mt-12 text-center max-sm mx-auto reveal-on-scroll">
                     <button onclick="switchView('shops')" class="btn-sparkle-gold w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-black py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform active:scale-95 transition-all text-xl">
                         すべての体験をチェック！ ✨
                     </button>
@@ -252,6 +240,19 @@
                 </div>
             </div>
         </section>
+
+        <!-- SNS連携セクション（フロントページのフッター直上に配置、指示されたリンクを反映） -->
+        <div class="bg-white py-12 px-4 flex flex-col items-center gap-6 border-t border-gray-100 reveal-on-scroll">
+            <h3 class="text-xl font-black text-gray-600">最新情報はこちらをチェック！✨</h3>
+            <div class="flex justify-center gap-4 md:gap-8">
+                <a href="https://www.instagram.com/cocomachi.marche?igsh=dmkwdGl6Ynd1bzhy" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-gradient-to-br from-[#405DE6] via-[#E1306C] to-[#FFDC80] text-white px-8 py-3 rounded-full text-sm md:text-base font-black shadow-lg hover:shadow-xl active:scale-95 transition-all">
+                    <i class="fab fa-instagram text-xl"></i> Instagram
+                </a>
+                <a href="https://lin.ee/cA7Hla9" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#06C755] text-white px-8 py-3 rounded-full text-sm md:text-base font-black shadow-lg hover:shadow-xl active:scale-95 transition-all">
+                    <i class="fab fa-line text-xl"></i> 公式LINE
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- 【画面：ショップカタログ】 -->
@@ -263,41 +264,62 @@
 
             <h1 class="text-3xl md:text-5xl font-black mb-12 text-center md:text-left rainbow-text">体験カタログ</h1>
 
-            <!-- 特集枠：詳細ページへのリンク -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
-                <a href="szk.html" class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col border-b-8 border-pink-400 card-hover transition-all duration-300 block">
-                    <img src="images/szk.png" alt="スズキオート京葉" class="aspect-video object-cover" loading="lazy" onerror="this.src='https://placehold.co/400x300/f3f4f6/9ca3af?text=images/szk.png';">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+                <a href="szk.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-pink-400 card-hover block">
+                    <img src="images/szk.png" alt="スズキオート京葉" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/szk.png';">
                     <div class="p-6">
                         <h2 class="text-xl font-black mb-2"><i class="fas fa-car text-pink-500 mr-2"></i>スズキオート京葉</h2>
-                        <p class="text-gray-600 font-bold">かっこいい車と一緒にお仕事体験や記念撮影をしよう！</p>
+                        <p class="text-gray-600 font-bold">ほんものの車にたくさん落書きをして、記念撮影をしよう！</p>
                     </div>
                 </a>
-                <a href="pal.html" class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col border-b-8 border-green-400 card-hover transition-all duration-300 block">
-                    <img src="images/pal.png" alt="パルシステム" class="aspect-video object-cover" loading="lazy" onerror="this.src='https://placehold.co/400x300/f3f4f6/9ca3af?text=images/pal.png';">
+                <a href="pal.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-green-400 card-hover block">
+                    <img src="images/pal.png" alt="パルシステム" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/pal.png';">
                     <div class="p-6">
                         <h2 class="text-xl font-black mb-2"><i class="fas fa-truck text-green-500 mr-2"></i>パルシステム千葉</h2>
                         <p class="text-gray-600 font-bold">こんせんくんがやってくる！美味しい体験も！？</p>
                     </div>
                 </a>
-                <a href="mypl.html" class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col border-b-8 border-yellow-400 card-hover transition-all duration-300 block">
-                    <img src="images/mypl.png" alt="まいぷれ編集部" class="aspect-video object-cover" loading="lazy" onerror="this.src='https://placehold.co/400x300/f3f4f6/9ca3af?text=images/mypl.png';">
+                <a href="mypl.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-yellow-400 card-hover block">
+                    <img src="images/mypl.png" alt="まいぷれ編集部" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/mypl.png';">
                     <div class="p-6">
                         <h2 class="text-xl font-black mb-2"><i class="fas fa-edit text-yellow-500 mr-2"></i>まいぷれ編集部</h2>
                         <p class="text-gray-600 font-bold">まいぷれ編集部と一緒にイベント内を取材しよう！</p>
                     </div>
                 </a>
+                <a href="yud.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-blue-400 card-hover block">
+                    <img src="images/yud.png" alt="船橋の銭湯 湯どこ" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/yud.png';">
+                    <div class="p-6">
+                        <h2 class="text-xl font-black mb-2"><i class="fas fa-bath text-blue-500 mr-2"></i>船橋の銭湯 湯どこ</h2>
+                        <p class="text-gray-600 font-bold">お風呂屋さんの楽しい体験が待ってるよ。</p>
+                    </div>
+                </a>
             </div>
 
-            <!-- 店舗グリッド -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid">
+            <!-- メインのグリッド（行3〜行6に対応） -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid-main"></div>
+            
+            <!-- 協力グループ挿入セクション（6行目と7行目の間） -->
+            <div id="cooperation-header" class="hidden">
+                <h2 class="text-2xl md:text-3xl font-black mt-16 mb-8 text-center text-gray-700 bg-white inline-block px-10 py-3 rounded-full shadow-sm border-2 border-purple-200 mx-auto block w-fit">協力グループ</h2>
             </div>
+            
+            <!-- 協力グループのグリッド（行7に対応） -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid-coop"></div>
+
+            <!-- 協力企業挿入セクション（7行目と8行目の間） -->
+            <div id="corporation-header" class="hidden">
+                <h2 class="text-2xl md:text-3xl font-black mt-16 mb-8 text-center text-gray-700 bg-white inline-block px-10 py-3 rounded-full shadow-sm border-2 border-blue-200 mx-auto block w-fit">協力企業・団体</h2>
+            </div>
+
+            <!-- 協力企業のグリッド（行8に対応：カタログは 911.jpg） -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid-corp"></div>
             
             <p class="mt-12 text-center text-gray-500 font-bold italic">他にも楽しい体験がいっぱい待ってるよ！</p>
         </div>
     </div>
 
     <!-- 共通フッター -->
-    <footer class="bg-yellow-400 py-16 px-4 text-center text-white mt-12">
+    <footer class="bg-yellow-400 py-16 px-4 text-center text-white mt-0">
         <h2 class="text-2xl font-black mb-4 tracking-widest">3月22日は、高根台公民館に全員集合！</h2>
         <p class="text-white font-bold italic mb-4">楽しい体験がいっぱい待ってるよ！</p>
         <p class="text-white font-bold text-sm mb-4">後援：船橋市・船橋市教育委員会</p>
@@ -305,24 +327,37 @@
     </footer>
 
     <script>
-        const apiKey = ""; // Gemini APIキー
+        const apiKey = "";
 
-        // 店舗データ
+        // ショップリスト
         const shops = [
-            { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "みんな大好き「ジャークチキン」！" },
-            { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "楽しいアートの世界を楽しもう！" },
-            { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分だけの作品を形にしてみよう。" },
-            { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "住んでみたいお家のデザイン体験！" },
-            { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-home", color: "yellow", desc: "暮らしを彩る素敵なアイテム！" },
-            { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "地元の美味しい洋食バル！" },
-            { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚と驚きの体験！" },
+            { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "ジャークチキン！" },
+            { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "楽しいアートの世界！" },
+            { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分だけの作品作り。" },
+            { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "お家のデザイン体験！" },
+            { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-gem", color: "yellow", desc: "暮らしを彩るアイテム！" },
+            { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "美味しい洋食バル！" },
+            { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚体験！" },
             { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "オリジナル雑貨を作ろう！" },
             { id: "npi", name: "Natural Portrait", img: "images/npi.png", icon: "fa-camera", color: "amber", desc: "みんなで思い出を残そう！" },
-            { id: "tps", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "ピアノに合わせて楽しくダンス！" },
-            { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-sparkles", color: "sky", desc: "お肌をピカピカに磨こう！" }
+            { id: "tmp", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "楽しくダンス！" },
+            { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "お肌をピカピカに！" }
         ];
 
-        // ページ切り替え
+        const extra = [
+            { id: "oyk", name: "お好み焼き きんいろ", img: "images/oyk.png", icon: "fa-utensils", color: "orange", desc: "ふわとろお好み焼き！" },
+            { id: "pottery", name: "陶芸・土遊び", img: "images/pot.png", icon: "fa-hand-holding-droplet", color: "orange", desc: "土の感触で器作り！" },
+            { id: "nail", name: "こどもネイル", img: "images/nail.png", icon: "fa-hand-sparkles", color: "pink", desc: "指先をデコ！" },
+            { id: "flower", name: "花アレンジ", img: "images/flower.png", icon: "fa-seedling", color: "emerald", desc: "飾り作り！" },
+            { id: "nga", name: "似顔絵コーナー", img: "images/nga.png", icon: "fa-palette", color: "amber", desc: "似顔絵！" },
+            { id: "ngg", name: "船橋地区アマチュア人形劇連合会", img: "images/ngg.jpg", icon: "fa-masks-theater", color: "purple", desc: "人形劇を見て、自分だけの人形を作ろう！" },
+            { id: "thb", name: "東邦大学ボランティア部", img: "images/thb.jpeg", icon: "fa-flask", color: "blue", desc: "みんなでスライムをつくろう！", url: "https://www.instagram.com/tohovolunteer/" },
+            { id: "orgm", name: "おりがみ", img: "images/orgm.jpg", icon: "fa-shapes", color: "yellow", desc: "ワクワク楽しくボッチャ体験！", url: "https://origami-vol.or.jp/student/?gad_source=1&gad_campaignid=23360419821&gbraid=0AAAAAplm0FAnAloM9tPeqKDWmzQRtDsO1&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMR5jfuBqEv0HMDLbv6ZDdydbSEVDpQF7vu1xButVDSzcDHp39aPLoaAuX1EALw_wcB" },
+            { id: "gb", name: "グリーンベース", img: "images/gb.jpg", icon: "fa-leaf", color: "green", desc: "竹をドリルで加工しよう！", url: "https://www.instagram.com/_green.base/" },
+            { id: "tep", name: "TEPLUS", img: "images/tpm2.jpeg", icon: "fa-laptop-code", color: "slate", desc: "オンラインであなたのビジネスを支えます！", url: "https://teplus.my.canva.site/" },
+            { id: "fsb", name: "船橋市消防局 東消防署", img: "images/911.jpg", icon: "fa-fire-extinguisher", color: "red", desc: "消防士さんと消火体験！本物の迫力を間近で。", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" }
+        ];
+
         function switchView(view) {
             window.scrollTo(0, 0);
             if (view === 'home') {
@@ -335,94 +370,50 @@
             }
         }
 
-        // 店舗カタログのレンダリング
+        function createCard(item, colorClass = "400", isExternal = false) {
+            const card = document.createElement('a');
+            card.href = item.url || `${item.id}.html`;
+            if (isExternal) { card.target = "_blank"; card.rel = "noopener noreferrer"; }
+            card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-${colorClass} card-hover block`;
+            card.innerHTML = `
+                <div class="aspect-square bg-${item.color}-50 overflow-hidden rounded-xl mb-3">
+                    <img src="${item.img}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
+                </div>
+                <h3 class="font-black text-sm">
+                    <i class="fas ${item.icon} mr-1 text-${item.color}-400"></i>${item.name}
+                </h3>
+                <p class="text-[10px] text-gray-500 mt-1 font-bold">${item.desc}</p>
+            `;
+            return card;
+        }
+
         function renderShops() {
-            const grid = document.getElementById('shop-grid');
-            if (grid.children.length > 0) return;
-            
-            shops.forEach(shop => {
-                const card = document.createElement('a');
-                card.href = `${shop.id}.html`;
-                card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${shop.color}-400 card-hover transition-all block`;
-                card.innerHTML = `
-                    <div class="aspect-square bg-${shop.color}-50 overflow-hidden rounded-xl mb-3">
-                        <img src="${shop.img}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://placehold.co/200x200/eee/999?text=${shop.id}';">
-                    </div>
-                    <h3 class="font-black text-sm"><i class="fas ${shop.icon} mr-1 text-${shop.color}-400"></i>${shop.name}</h3>
-                    <p class="text-[10px] text-gray-500 mt-1 font-bold">${shop.desc}</p>
-                `;
-                grid.appendChild(card);
-            });
-
-            // 追加体験データ
-            const extra = [
-                { id: "oyk", name: "お好み焼き きんいろ", img: "images/oyk.png", color: "orange", desc: "ふわとろお好み焼き！" },
-                { id: "pottery", name: "陶芸・土遊び", icon: "🏺", color: "orange", desc: "土の感触で器作り！" },
-                { id: "nail", name: "こどもネイル", icon: "💅", color: "pink", desc: "指先をキラキラデコ！" },
-                { id: "flower", name: "花アレンジ", icon: "💐", color: "emerald", desc: "素敵な飾り作り！" },
-                { id: "wood", name: "木工ワーク", icon: "🔨", color: "amber", desc: "トントン叩いて作ろう！" },
-                { id: "slime", name: "スライム作り", img: "images/ths.png", color: "purple", desc: "東邦大学 ボランティア部" },
-                { id: "boccia", name: "ボッチャ体験", img: "images/orgmb.jpeg", color: "blue", desc: "おりがみ" },
-                { id: "bamboo", name: "竹明かりアートづくり", img: "images/gbt.png", color: "red", desc: "グリーンベース" },
-                { id: "puppet", name: "人形劇", img: "images/ngg.jpg", color: "pink", desc: "船橋地区アマチュア人形劇連絡会" }
-            ];
+            const gridMain = document.getElementById('shop-grid-main');
+            const gridCoop = document.getElementById('shop-grid-coop');
+            const gridCorp = document.getElementById('shop-grid-corp');
+            const coopHeader = document.getElementById('cooperation-header');
+            const corpHeader = document.getElementById('corporation-header');
+            if (gridMain.children.length > 0) return;
+            shops.forEach(shop => gridMain.appendChild(createCard(shop, "400", false)));
             extra.forEach((item, index) => {
-                // カタログの4行目（16枠目 = shops11個 + extraの5個目）の後に挿入
-                if (index === 5) {
-                    const heading = document.createElement('h2');
-                    heading.className = "text-2xl md:text-3xl font-black mb-8 col-span-2 md:col-span-4 mt-12 text-center md:text-left rainbow-text";
-                    heading.textContent = "協力グループ";
-                    grid.appendChild(heading);
-                }
-
-                // 協力グループ直下の4枠（index 5〜8）はリンクなし・ホバーなしのdivにする
-                const isDisplayOnly = index >= 5;
-                const card = document.createElement(isDisplayOnly ? 'div' : 'a');
-                
-                if (!isDisplayOnly) {
-                    card.href = `${item.id}.html`;
-                }
-
-                const hoverClass = isDisplayOnly ? '' : 'card-hover transition-all cursor-pointer';
-                card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-300 block ${hoverClass}`;
-                
-                const media = item.img 
-                    ? `<div class="aspect-square bg-${item.color}-50 overflow-hidden rounded-xl mb-3">
-                        <img src="${item.img}" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
-                       </div>`
-                    : `<div class="aspect-square bg-${item.color}-50 flex items-center justify-center rounded-xl mb-3 text-2xl">${item.icon}</div>`;
-
-                card.innerHTML = `
-                    ${media}
-                    <h3 class="font-black text-sm">${item.name}</h3>
-                    <p class="text-[10px] text-gray-500 mt-1 font-bold">${item.desc}</p>
-                `;
-                grid.appendChild(card);
+                if (index <= 4) gridMain.appendChild(createCard(item, "300", false));
+                else if (index <= 8) { coopHeader.classList.remove('hidden'); gridCoop.appendChild(createCard(item, "300", true)); }
+                else { corpHeader.classList.remove('hidden'); gridCorp.appendChild(createCard(item, "300", true)); }
             });
         }
 
-        const handleHashChange = () => {
-            if (window.location.hash === '#catalog') {
-                switchView('shops');
-            }
-        };
-        window.addEventListener('DOMContentLoaded', handleHashChange);
-        window.addEventListener('hashchange', handleHashChange);
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-
+        // AIプランナー：起動修正とリトライ処理（鉄の掟）
         async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
+            const delays = [1000, 2000, 4000, 8000, 16000];
             try {
                 const response = await fetch(url, options);
-                if (!response.ok) throw new Error('Retry');
+                if (!response.ok) throw new Error('Network response was not ok');
                 return await response.json();
             } catch (err) {
                 if (retries <= 0) throw err;
-                await new Promise(r => setTimeout(r, backoff));
-                return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                const delay = delays[5 - retries] || backoff * 2;
+                await new Promise(r => setTimeout(r, delay));
+                return fetchWithRetry(url, options, retries - 1, delay);
             }
         }
 
@@ -433,10 +424,24 @@
             const loader = document.getElementById('loader-box');
             const pContainer = document.getElementById('plan-container');
             
-            resArea.classList.remove('hidden'); loader.style.display = 'flex'; pContainer.innerHTML = '';
+            resArea.classList.remove('hidden'); 
+            loader.style.display = 'flex'; 
+            pContainer.innerHTML = '';
             
-            const systemPrompt = "イベント案内人として実在リストから提案を。JSON形式で。";
-            const userQuery = `年齢「${age}」、気分「${mood}」に合うプランをリストから3つ選んで。steps: [{title, description, image_name}] 形式で。リスト: ${JSON.stringify(shops)}`;
+            const allActivities = [
+                { name: "車に落書きしちゃおう！", image_name: "images/car.png", description: "本物の車にお絵描き！", url: "#catalog" },
+                { name: "船橋市消防局 東消防署 模擬体験", image_name: "images/911.jpg", description: "東消防署の消防士さんと体験！", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" },
+                { name: "パルシステム千葉", image_name: "images/pal.png", description: "こんせんくんがやってくる！", url: "pal.html" },
+                { name: "船橋の銭湯 湯どこ", image_name: "images/yud.png", description: "お風呂屋さんの体験！", url: "yud.html" },
+                { name: "スズキオート京葉", image_name: "images/szk.png", description: "車にお絵描き体験！", url: "szk.html" },
+                { name: "まいぷれ編集部", image_name: "images/mypl.png", description: "取材体験をしよう！", url: "mypl.html" },
+                ...shops.map(s => ({ name: s.name, image_name: s.img, description: s.desc, url: `${s.id}.html` })),
+                ...extra.map(e => ({ name: e.name, image_name: e.img, description: e.desc, url: e.url || `${e.id}.html` }))
+            ];
+
+            const systemPrompt = `あなたは「ココまちマルシェ」の案内人です。年齢：${age}、気分：${mood}のユーザーへ、リストから最高の3ステップをJSON形式で提案して。タイトルは短く、説明は1文（30文字以内）で！`;
+            const userQuery = `リストから3つ選んで提案してください。
+            リスト: ${JSON.stringify(allActivities)}`;
 
             try {
                 const result = await fetchWithRetry(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
@@ -444,32 +449,69 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         contents: [{ parts: [{ text: userQuery }] }],
-                        generationConfig: { responseMimeType: "application/json" },
+                        generationConfig: { 
+                            responseMimeType: "application/json",
+                            responseSchema: {
+                                type: "OBJECT",
+                                properties: {
+                                    steps: {
+                                        type: "ARRAY",
+                                        items: {
+                                            type: "OBJECT",
+                                            properties: {
+                                                title: { type: "STRING" },
+                                                description: { type: "STRING" },
+                                                image_name: { type: "STRING" },
+                                                url: { type: "STRING" }
+                                            },
+                                            required: ["title", "description", "image_name", "url"]
+                                        }
+                                    }
+                                },
+                                required: ["steps"]
+                            }
+                        },
                         systemInstruction: { parts: [{ text: systemPrompt }] }
                     })
                 });
+                
                 const data = JSON.parse(result.candidates[0].content.parts[0].text);
                 loader.style.display = 'none';
-                data.steps.forEach((s, i) => {
-                    const d = document.createElement('div');
-                    d.className = "flex items-center gap-4 bg-purple-50 p-4 rounded-2xl border-2 border-purple-100 animate-float shadow-sm";
-                    d.style.animationDelay = `${i * 0.2}s`;
-                    d.innerHTML = `
-                        <div class="w-16 h-16 flex-shrink-0 overflow-hidden rounded-xl bg-gray-200">
-                            <img src="${s.image_name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/200x200/eee/999';">
-                        </div>
-                        <div>
-                            <div class="text-xs font-black text-purple-400 mb-1">STEP ${i + 1}</div>
-                            <div class="font-black text-gray-800 leading-tight">${s.title}</div>
-                            <div class="text-[10px] text-gray-600 font-bold mt-1">${s.description}</div>
-                        </div>`;
-                    pContainer.appendChild(d);
-                });
+                
+                if (data && data.steps) {
+                    data.steps.forEach((s, i) => {
+                        const link = document.createElement('a');
+                        link.href = s.url;
+                        if (s.url.startsWith('http')) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
+                        else if (s.url === '#catalog') { link.onclick = (e) => { e.preventDefault(); switchView('shops'); }; }
+
+                        link.className = "flex items-center gap-4 bg-white p-4 rounded-2xl border-2 border-purple-100 shadow-sm animate-float card-hover block transition-all mb-3";
+                        link.style.animationDelay = `${i * 0.2}s`;
+                        link.innerHTML = `
+                            <div class="w-16 h-16 flex-shrink-0 overflow-hidden rounded-xl bg-gray-200">
+                                <img src="${s.image_name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/200x200/eee/999?text=Go!';">
+                            </div>
+                            <div>
+                                <div class="text-[10px] font-black text-purple-400">コース ${i + 1}</div>
+                                <div class="font-black text-gray-800 text-sm leading-tight">${s.title}</div>
+                                <div class="text-[10px] text-gray-500 font-bold mt-1">${s.description}</div>
+                            </div>`;
+                        pContainer.appendChild(link);
+                    });
+                }
             } catch (e) { 
                 loader.style.display = 'none'; 
-                pContainer.innerHTML = "<p class='text-center font-bold text-gray-400'>もう一度押してみて！✨</p>"; 
+                pContainer.innerHTML = "<p class='text-center font-bold text-gray-400'>通信をリトライしましたが失敗しました。もう一度押してみて！✨</p>"; 
             }
         }
+
+        const handleHashChange = () => { if (window.location.hash === '#catalog') switchView('shops'); };
+        window.addEventListener('DOMContentLoaded', handleHashChange);
+        window.addEventListener('hashchange', handleHashChange);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
