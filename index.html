@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ココまちマルシェ in 高根台 | 3/22(日)開催！</title>
     <meta name="description" content="3月22日(日) 高根台公民館で開催！車に落書き！？消防士体験！？子どもの「やりたい！」が全部叶う,最高の体験型マルシェ！">
-    <link rel="icon" href="images/rogo2.png" type="image/png">
+    <link rel="icon" href="images/rogo2.png?v=2" type="image/png">
 
     <!-- 高速化：メイン画像をプリロード -->
     <link rel="preload" as="image" href="images/header.png">
@@ -207,6 +207,10 @@
                         学校では学べない体験！<br>
                         街のみんなでつくりました！
                     </p>
+                    <p class="text-lg md:text-xl font-bold text-pink-500 mt-4">
+                        たくさんのお店さんが参加してるよ！<br>
+                        やりたいことを3つ選んでみよう！
+                    </p>
                 </div>
             </div>
         </section>
@@ -262,7 +266,11 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 reveal-on-scroll">
                     <a href="szk.html"
-                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-pink-400 card-hover block">
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-pink-400 card-hover block relative">
+                        <div
+                            class="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1.5 rounded-xl shadow-xl z-30 flex items-center gap-1 font-black ring-2 ring-white">
+                            <span>✨ 体験・遊び</span>
+                        </div>
                         <img src="images/szk.png" alt="スズキオート京葉" class="aspect-video object-cover w-full"
                             onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/szk.png';">
                         <div class="p-6">
@@ -272,7 +280,11 @@
                         </div>
                     </a>
                     <a href="pal.html"
-                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-green-400 card-hover block">
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-green-400 card-hover block relative">
+                        <div
+                            class="absolute top-4 right-4 bg-amber-400 text-white px-3 py-1.5 rounded-xl shadow-xl z-30 flex items-center gap-1 font-black ring-2 ring-white">
+                            <span>🍟 たべる</span>
+                        </div>
                         <img src="images/pal.png" alt="パルシステム" class="aspect-video object-cover w-full"
                             onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/pal.png';">
                         <div class="p-6">
@@ -282,7 +294,11 @@
                         </div>
                     </a>
                     <a href="mypl.html"
-                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-yellow-400 card-hover block">
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-yellow-400 card-hover block relative">
+                        <div
+                            class="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1.5 rounded-xl shadow-xl z-30 flex items-center gap-1 font-black ring-2 ring-white">
+                            <span>✨ 体験・遊び</span>
+                        </div>
                         <img src="images/mypl.png" alt="まいぷれ編集部" class="aspect-video object-cover w-full"
                             onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/mypl.png';">
                         <div class="p-6">
@@ -292,7 +308,11 @@
                         </div>
                     </a>
                     <a href="yud.html"
-                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-blue-400 card-hover block">
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-blue-400 card-hover block relative">
+                        <div
+                            class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1.5 rounded-xl shadow-xl z-30 flex items-center gap-1 font-black ring-2 ring-white">
+                            <span>🏃 動かす</span>
+                        </div>
                         <img src="images/ydk.png" alt="稀石浴 温どこ" class="aspect-video object-cover w-full"
                             onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/ydk.png';">
                         <div class="p-6">
@@ -306,7 +326,11 @@
                 <!-- 3行目：Le Petit Cafe を単独（スズキオート京葉と同サイズ）で配置 -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 reveal-on-scroll">
                     <a href="lpc.html"
-                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-orange-400 card-hover block">
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-orange-400 card-hover block relative">
+                        <div
+                            class="absolute top-4 right-4 bg-amber-400 text-white px-3 py-1.5 rounded-xl shadow-xl z-30 flex items-center gap-1 font-black ring-2 ring-white">
+                            <span>🍟 たべる</span>
+                        </div>
                         <img src="images/shops/lpc/main.jpeg" alt="Le Petit Cafe"
                             class="aspect-video object-cover w-full"
                             onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=Le+Petit+Cafe';">
@@ -475,278 +499,410 @@
                 </div>
             </div>
         </section>
-    </div>
-
-
-
-    <!-- 共通フッター -->
-    <footer class="bg-yellow-400 py-16 px-4 text-center text-white mt-0">
-        <h2 class="text-2xl font-black mb-4 tracking-widest">3月22日は、高根台公民館に全員集合！</h2>
-        <p class="text-white font-bold italic mb-4">楽しい体験がいっぱい待ってるよ！</p>
-        <p class="text-white font-bold text-sm mb-4">後援：船橋市・船橋市教育委員会</p>
-        <div class="inline-block text-left text-white font-bold text-sm mb-4">
-            <p class="mb-1">協力：高根台地区社会福祉協議会</p>
-            <p class="pl-[3.5em]">高根台プラザ商店街</p>
-        </div>
-        <div class="font-bold text-sm mt-8">&copy; 2026 ココまちマルシェ実行委員会</div>
-    </footer>
-
-    <script>
-        const apiKey = "";
-
-        // ショップリスト
-        const shops = [
-            { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "おいしいジャークチキンを食べよう！" },
-            { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "世界的アーティストU-sukeとキーホルダーをつくろう！" },
-            { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分で描いたイラストをシールにしよう！" },
-            { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "家に色をつけてみんなの街をつくろう！" },
-            { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-gem", color: "yellow", desc: "キラキラ オシャレに変身しよう！" },
-            { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "行列のできる洋食屋バルのスープを飲んで温まろう！" },
-            { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚体験！", url: "uchu.html" },
-            { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "自分だけの特別な作品をつくろう！" },
-            { id: "npi", name: "Natural Portrait", img: "images/npi.png", icon: "fa-camera", color: "amber", desc: "みんなで思い出を残そう！" },
-            { id: "tmp", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "ピアノやバイオリンなどの楽器を引いてみよう！" },
-            { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "好きな香りでオリジナルオイル作り" },
-            { id: "ust", name: "ヨガスタジオ U-studio", img: "images/ust.png", icon: "fa-person-running", color: "purple", desc: "１０秒で.腕相撲(うでずもう)が強くなる！？.身体がやわらかくなる！" }
-
-        ];
-
-        const extra = [
-            { id: "oyk", name: "お好み焼き きんいろ", img: "images/oyk.png", icon: "fa-utensils", color: "orange", desc: "ふわとろお好み焼き！" },
-            { id: "enn", name: "縁日ブース", img: "images/en.png", icon: "fa-bullseye", color: "red", desc: "射的、型抜き、人形すくい、輪投げを楽しもう！" },
-            { id: "css", name: "千葉スカイセイラーズ", img: "images/logo.png", icon: "fa-baseball-bat-ball", color: "blue", desc: "プロ野球選手とストラックアウトに挑戦！", url: "https://sky-sailors.com/" },
-
-            { id: "ngg", name: "船橋地区アマチュア人形劇連合会", img: "images/ngg.png", icon: "fa-masks-theater", color: "purple", desc: "人形劇を見て、自分だけの人形を作ろう！", pos: "left center" },
-            { id: "thb", name: "東邦大学ボランティア部", img: "images/thb.png", icon: "fa-flask", color: "blue", desc: "みんなでスライムをつくろう！", url: "https://www.instagram.com/tohovolunteer/" },
-            { id: "orgm", name: "おりがみ", img: "images/orgm.png", icon: "fa-shapes", color: "yellow", desc: "ワクワク楽しくボッチャ体験！", url: "https://origami-vol.or.jp/student/?gad_source=1&gad_campaignid=23360419821&gbraid=0AAAAAplm0FAnAloM9tPeqKDWmzQRtDsO1&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMR5jfuBqEv0HMDLbv6ZDdydbSEVDpQF7vu1xButVDSzcDHp39aPLoaAuX1EALw_wcB" },
-            { id: "gb", name: "グリーンベース", img: "images/gbt.png", icon: "fa-leaf", color: "green", desc: "竹をドリルで加工しよう！", url: "https://www.instagram.com/_green.base/" },
-            { id: "tep", name: "TEPLUS", img: "images/tpm2.jpeg", icon: "fa-laptop-code", color: "slate", desc: "オンラインであなたのビジネスを支えます！", url: "https://teplus.my.canva.site/" },
-            { id: "fsb", name: "船橋市消防局 東消防署", img: "images/911.jpg", icon: "fa-fire-extinguisher", color: "red", desc: "消防士さんと消火体験！本物の迫力を間近で。", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" },
-            { id: "tks", name: "高根台地区社会福祉協議会", img: "images/tks.png", icon: "fa-hand-holding-heart", color: "orange", desc: "地域のみんなで支え合い！活動紹介。", url: "#" },
-            { id: "tkp", name: "高根台プラザ商店街", img: "images/tkp.jpg", icon: "fa-shopping-bag", color: "blue", desc: "駅チカ 便利な商店街です！", url: "https://takanedai.shop/" },
-            { id: "fbe", name: "🚨千葉県 船橋東警察署", img: "images/tpl.png", icon: "fa-shield-halved", color: "slate", desc: "みんなの安全を守るパトカー、白バイがやってくる！", url: "https://www.police.pref.chiba.jp/police_department/funabashi_e/index.html" }
-        ];
-
-        function createCard(item, colorClass = "400", isExternal = false) {
-            const card = document.createElement('a');
-            card.href = item.url || `${item.id}.html`;
-            if (isExternal) { card.target = "_blank"; card.rel = "noopener noreferrer"; }
-            card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-${colorClass} card-hover block`;
-            card.innerHTML = `
-                <div class="aspect-square bg-${item.color}-50 overflow-hidden rounded-xl mb-3">
-                    <img src="${item.img}" class="w-full h-full object-cover" style="object-position: ${item.pos || 'center'}" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
+        <!-- 安心サポートFAQ＆アクセスセクション -->
+        <section id="faq-access" class="py-16 px-4 bg-white reveal-on-scroll">
+            <div class="container mx-auto max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+                        <i class="fas fa-info-circle mr-2 text-blue-500"></i>安心サポート & アクセス
+                    </h2>
+                    <p class="text-gray-600 font-bold italic">ご来場前にチェックしてね！✨</p>
                 </div>
-                <h3 class="font-black text-sm">
-                    <i class="fas ${item.icon} mr-1 text-${item.color}-400"></i>${item.name}
-                </h3>
-                <p class="text-[10px] text-gray-500 mt-1 font-bold">${item.desc}</p>
-            `;
-            return card;
-        }
 
-        function renderShops() {
-            const gridMain = document.getElementById('shop-grid-main');
-            const gridCoop = document.getElementById('shop-grid-coop');
-            const gridCorp = document.getElementById('shop-grid-corp');
-            const coopHeader = document.getElementById('cooperation-header');
-            const corpHeader = document.getElementById('corporation-header');
-            if (gridMain.children.length > 0) return;
-            shops.forEach(shop => gridMain.appendChild(createCard(shop, "400", false)));
-            extra.forEach((item, index) => {
-                if (index <= 2) gridMain.appendChild(createCard(item, "300", item.url && item.url.startsWith('http')));
-                else if (index <= 5) { coopHeader.classList.remove('hidden'); gridCoop.appendChild(createCard(item, "300", true)); }
-                else { corpHeader.classList.remove('hidden'); gridCorp.appendChild(createCard(item, "300", true)); }
-            });
-        }
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 左側：アクセスマップ -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-4 rounded-3xl border-2 border-blue-100 shadow-sm">
+                            <h3 class="font-black text-xl mb-4 flex items-center">
+                                <i class="fas fa-map-marked-alt mr-2 text-blue-500"></i>会場アクセス
+                            </h3>
+                            <div
+                                class="aspect-video w-full rounded-2xl overflow-hidden border-2 border-white shadow-inner mb-4">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.827053660993!2d140.02893417578994!3d35.730471672571376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60227fee5823cb69%3A0x523d9c6c0cf11f50!2z6Ii55qmL5biCIOmrmOagueWPsOWFrOawkemkqA!5e0!3m2!1sja!2sjp!4v1772360880816!5m2!1sja!2sjp"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="space-y-2 text-sm font-bold text-gray-700">
+                                <p class="flex items-start"><i
+                                        class="fas fa-location-dot mt-1 mr-2 text-red-500"></i>船橋市高根台１丁目２−５ 高根台公民館</p>
+                                <p class="flex items-start"><i
+                                        class="fas fa-train mt-1 mr-2 text-blue-500"></i>新京成線「高根公団駅」から徒歩約2分</p>
+                                <div class="bg-red-50 p-3 rounded-xl border border-red-100 mt-4">
+                                    <p class="text-red-600 font-black"><i
+                                            class="fas fa-exclamation-triangle mr-1"></i>駐車場はありません</p>
+                                    <p class="text-[11px] text-red-500 mt-1">
+                                        公民館には駐車場がありません。近隣のコインパーキングをご利用ください。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        // AIプランナー：起動修正とリトライ処理（鉄の掟）
-        async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
-            const delays = [1000, 2000, 4000, 8000, 16000];
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) throw new Error('Network response was not ok');
-                return await response.json();
-            } catch (err) {
-                if (retries <= 0) throw err;
-                const delay = delays[5 - retries] || backoff * 2;
-                await new Promise(r => setTimeout(r, delay));
-                return fetchWithRetry(url, options, retries - 1, delay);
-            }
-        }
+                    <!-- 右側：FAQ -->
+                    <div class="space-y-4">
+                        <div class="bg-yellow-50 p-6 rounded-3xl border-2 border-yellow-200 shadow-sm h-full">
+                            <h3 class="font-black text-xl mb-6 flex items-center">
+                                <i class="fas fa-question-circle mr-2 text-yellow-500"></i>よくある質問
+                            </h3>
 
-        async function generatePlan() {
-            const age = document.getElementById('child-age').value;
-            const mood = document.getElementById('child-mood').value;
-            const resArea = document.getElementById('result-area');
-            const loader = document.getElementById('loader-box');
-            const pContainer = document.getElementById('plan-container');
+                            <div class="space-y-6">
+                                <div>
+                                    <p class="font-black text-gray-800 flex items-center"><span
+                                            class="bg-yellow-400 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] mr-2">Q</span>雨が降ったら中止？
+                                    </p>
+                                    <p class="text-sm font-bold text-gray-600 mt-2 ml-7">公民館の室内で開催するので、雨でも安心して楽しめます！✨
+                                    </p>
+                                </div>
 
-            resArea.classList.remove('hidden');
-            loader.style.display = 'flex';
-            pContainer.innerHTML = '<p class="text-center text-gray-500 font-bold animate-pulse mb-4">AIがカタログ情報を元に、最高のプランを考え中...🤖💭</p>';
+                                <div>
+                                    <p class="font-black text-gray-800 flex items-center"><span
+                                            class="bg-yellow-400 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] mr-2">Q</span>ベビーカーで行ける？
+                                    </p>
+                                    <p class="text-sm font-bold text-gray-600 mt-2 ml-7">もちろんOKです！ベビーカー置き場も用意しています。</p>
+                                </div>
 
-            // 少し待機して「考え中」を演出
-            await new Promise(r => setTimeout(r, 1500));
+                                <div>
+                                    <p class="font-black text-gray-800 flex items-center"><span
+                                            class="bg-yellow-400 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] mr-2">Q</span>授乳やオムツ替えは？
+                                    </p>
+                                    <p class="text-sm font-bold text-gray-600 mt-2 ml-7">
+                                        公民館内の授乳室・オムツ替えスペースをご利用いただけます。スタッフにお声がけください！</p>
+                                </div>
 
-            // 正確なタグ定義（最新の提供データに基づく）
-            // 未就学児以上: ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！"]
-            // 小学校低学年以上: ["小学生低学年", "小学生高学年", "大人も楽しみたい！"]
-            const tagDefinition = {
-                // --- 体動かす系 ---
-                "yud": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "キックdeビンゴ"],
-                "ust": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "10秒で身体が変わる"],
-                "css": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "ストラックアウト"],
-                "orgm": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "ボッチャ"],
+                                <div>
+                                    <p class="font-black text-gray-800 flex items-center"><span
+                                            class="bg-yellow-400 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] mr-2">Q</span>持ち物は何が必要？
+                                    </p>
+                                    <p class="text-sm font-bold text-gray-600 mt-2 ml-7">
+                                        小銭やエコバッグがあると便利です。動きやすい服でのご来場をおすすめします！✨</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                // --- ものづくり楽しむ系 ---
-                "usk": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "キーホルダー作り"],
-                "mnm": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "ハンドメイド雑貨"],
-                "mld": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "オリジナルシール作り"],
-                "akh": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "街づくりぬり絵"],
-                "khe": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "オリジナルオイル作り"],
-                "thb": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "スライム作り"],
-                "gb": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "キャンドルトーチ作り"],
+                <!-- 最後の一押し！ -->
+                <div
+                    class="mt-12 bg-gradient-to-r from-orange-400 to-pink-500 rounded-3xl p-8 text-center text-white shadow-xl relative overflow-hidden group">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-black mb-4">＼ 楽しむ準備はできたかな？ ／</h3>
+                        <p class="font-bold opacity-90 mb-6">マップを保存して、当日は気をつけてお越しください！✨</p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=高根台公民館" target="_blank"
+                                class="bg-white text-orange-500 font-black px-8 py-3 rounded-xl hover:scale-105 transition shadow-lg flex items-center gap-2">
+                                <i class="fas fa-map-marker-alt"></i> Googleマップで開く
+                            </a>
+                            <a href="#ai-planner"
+                                class="bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 font-black px-8 py-3 rounded-xl hover:bg-white hover:text-orange-500 transition flex items-center gap-2">
+                                <i class="fas fa-magic"></i> プランナーでもう一度遊ぶ
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 装飾用背景 -->
+                    <div
+                        class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-yellow-400 py-16 px-4 text-center text-white mt-0">
+            <h2 class="text-2xl font-black mb-4 tracking-widest">3月22日は、高根台公民館に全員集合！</h2>
+            <p class="text-white font-bold italic mb-4">楽しい体験がいっぱい待ってるよ！</p>
+            <p class="text-white font-bold text-sm mb-4">後援：船橋市・船橋市教育委員会</p>
+            <div class="inline-block text-left text-white font-bold text-sm mb-4">
+                <p class="mb-1">協力：高根台地区社会福祉協議会</p>
+                <p class="pl-[3.5em]">高根台プラザ商店街</p>
+            </div>
+            <div class="font-bold text-sm mt-8">&copy; 2026 ココまちマルシェ実行委員会</div>
+        </footer>
 
-                // --- 食べる系 ---
-                "pal": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "試食会"],
-                "knr": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "ジャークチキン"],
-                "369": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "野菜スープ"],
-                "lpc": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "ブラジル料理"],
-                "uop": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "串焼き"],
-                "oyk": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "お好み焼き"],
+        <script>
+            const apiKey = "";
 
-                // --- 体験する／遊び系 ---
-                "mypl": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "子ども記者クラブ"],
-                "szk": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "ラクガキ車"],
-                "tmp": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "ピアノ体験"],
-                "npi": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "写真撮影"],
-                "ngg": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "人形劇"],
-                "fsb": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "消化訓練"],
-                "fbe": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "パトカー試乗"],
-                "enn": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "縁日でお菓子"],
-
-                // --- その他 ---
-                "yknr": ["大人も楽しみたい！", "全部楽しみたい！"],
-                "tep": ["大人も楽しみたい！", "全部楽しみたい！"],
-                "tks": ["大人も楽しみたい！", "全部楽しみたい！"],
-                "tkp": ["大人も楽しみたい！", "全部楽しみたい！"]
-            };
-
-            const allActivities = [
-                // 特別イベント（車、消防署）
-                { id: "car-painting", name: "車に落書きしちゃおう！", image_name: "images/car.png", description: "本物の車にお絵描き体験！", url: "#catalog", tags: tagDefinition["szk"] },
-                { id: "fire-dept", name: "船橋市消防局 東消防署", image_name: "images/911.jpg", description: "消防士さんと消火体験！", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html", tags: tagDefinition["fsb"] },
-
-                // ショップリスト
-                ...shops.map(s => {
-                    const tags = tagDefinition[s.id] || ["全部楽しみたい！"];
-                    const detail = tags[tags.length - 1]; // 最後に定義した具体的な活動内容
-                    return {
-                        id: s.id,
-                        name: s.name,
-                        image_name: s.img,
-                        description: (detail && detail.length > 4) ? detail : s.desc, // 具体的な活動があれば優先
-                        url: s.url || `${s.id}.html`,
-                        tags: tags
-                    };
-                }),
-
-                // エキストラリスト
-                ...extra.map(e => {
-                    const tags = tagDefinition[e.id] || ["全部楽しみたい！"];
-                    const detail = tags[tags.length - 1];
-                    return {
-                        id: e.id,
-                        name: e.name,
-                        image_name: e.img,
-                        description: (detail && detail.length > 4) ? detail : e.desc,
-                        url: e.url || `${e.id}.html`,
-                        tags: tags
-                    };
-                })
+            // ショップリスト
+            const shops = [
+                { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "おいしいジャークチキンを食べよう！", category: "たべる" },
+                { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "世界的アーティストU-sukeとキーホルダーをつくろう！", category: "つくる" },
+                { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分で描いたイラストをシールにしよう！", category: "つくる" },
+                { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "家に色をつけてみんなの街をつくろう！", category: "つくる" },
+                { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-gem", color: "yellow", desc: "キラキラ オシャレに変身しよう！", category: "体験・遊び" },
+                { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "行列のできる洋食屋バルのスープを飲んで温まろう！", category: "たべる" },
+                { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚体験！", url: "uchu.html", category: "たべる" },
+                { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "自分だけの特別な作品をつくろう！", category: "つくる" },
+                { id: "npi", name: "Natural Portrait", img: "images/npi.png", icon: "fa-camera", color: "amber", desc: "みんなで思い出を残そう！", category: "体験・遊び" },
+                { id: "tmp", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "ピアノやバイオリンなどの楽器を引いてみよう！", category: "体験・遊び" },
+                { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "好きな香りでオリジナルオイル作り", category: "つくる" },
+                { id: "ust", name: "ヨガスタジオ U-studio", img: "images/ust.png", icon: "fa-person-running", color: "purple", desc: "１０秒で.腕相撲(うでずもう)が強くなる！？.身体がやわらかくなる！", category: "動かす" }
             ];
 
-            // 重複排除（IDベース）
-            const uniqueActivities = Array.from(new Map(allActivities.map(item => [item.id || item.name, item])).values());
+            const extra = [
+                { id: "oyk", name: "お好み焼き きんいろ", img: "images/oyk.png", icon: "fa-utensils", color: "orange", desc: "ふわとろお好み焼き！", group: "main", category: "たべる" },
+                { id: "enn", name: "縁日ブース", img: "images/en.png", icon: "fa-bullseye", color: "red", desc: "射的、型抜き、人形すくい、輪投げを楽しもう！", group: "main", category: "体験・遊び" },
+                { id: "css", name: "千葉スカイセイラーズ", img: "images/logo.png", icon: "fa-baseball-bat-ball", color: "blue", desc: "プロ野球選手とストラックアウトに挑戦！", url: "https://sky-sailors.com/", group: "main", category: "動かす" },
 
-            let steps = [];
+                { id: "ngg", name: "船橋地区アマチュア人形劇連合会", img: "images/ngg.png", icon: "fa-masks-theater", color: "purple", desc: "人形劇を見て、自分だけの人形を作ろう！", pos: "left center", group: "coop", category: "体験・遊び" },
+                { id: "thb", name: "東邦大学ボランティア部", img: "images/thb.png", icon: "fa-flask", color: "blue", desc: "みんなでスライムをつくろう！", url: "https://www.instagram.com/tohovolunteer/", group: "coop", category: "つくる" },
+                { id: "orgm", name: "おりがみ", img: "images/orgm.png", icon: "fa-shapes", color: "yellow", desc: "ワクワク楽しくボッチャ体験！", url: "https://origami-vol.or.jp/student/?gad_source=1&gad_campaignid=23360419821&gbraid=0AAAAAplm0FAnAloM9tPeqKDWmzQRtDsO1&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMR5jfuBqEv0HMDLbv6ZDdYdbSEVDpQF7vu1xButVDSzcDHp39aPLoaAuX1EALj_wcB", group: "coop", category: "動かす" },
+                { id: "gb", name: "グリーンベース", img: "images/gbt.png", icon: "fa-leaf", color: "green", desc: "竹をドリルで加工しよう！", url: "https://www.instagram.com/_green.base/", group: "coop", category: "つくる" },
 
-            // 1. 年齢と気分による厳格なフィルタリング
-            let candidates = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && a.tags.includes(mood));
+                { id: "tep", name: "TEPLUS", img: "images/tpm2.jpeg", icon: "fa-laptop-code", color: "slate", desc: "オンラインであなたのビジネスを支えます！", url: "https://teplus.my.canva.site/", group: "corp", category: "体験・遊び" },
+                { id: "fsb", name: "船橋市消防局 東消防署", img: "images/911.jpg", icon: "fa-fire-extinguisher", color: "red", desc: "消防士さんと消火体験！本物の迫力を間近で。", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html", group: "corp", category: "動かす" },
+                { id: "tks", name: "高根台地区社会福祉協議会", img: "images/tks.png", icon: "fa-hand-holding-heart", color: "orange", desc: "地域のみんなで支え合い！活動紹介。", url: "https://www.instagram.com/takanedai2525?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", group: "corp", category: "体験・遊び" },
+                { id: "tkp", name: "高根台プラザ商店街", img: "images/tkp.jpg", icon: "fa-shopping-bag", color: "blue", desc: "駅チカ 便利な商店街です！", url: "https://takanedai.shop/", group: "corp", category: "体験・遊び" },
+                { id: "fbe", name: "🚨千葉県 船橋東警察署", img: "images/tpl.png", icon: "fa-shield-halved", color: "slate", desc: "みんなの安全を守るパトカー、白バイがやってくる！", url: "https://www.police.pref.chiba.jp/police_department/funabashi_e/index.html", group: "corp", category: "動かす" }
+            ];
 
-            // 「美味しいもの」の場合は、食べる系以外を絶対に入れない
-            if (mood === "お腹が空いた！美味しいもの食べたい") {
-                // 追加緩和なし
+            function createCard(item, colorClass = "400", isExternal = false) {
+                const card = document.createElement('a');
+                card.href = item.url || `${item.id}.html`;
+                if (isExternal) { card.target = "_blank"; card.rel = "noopener noreferrer"; }
+                card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-${colorClass} card-hover block relative`;
+
+                // カテゴリーに応じた絵文字と背景色
+                let catEmoji = "✨";
+                let bgColor = "bg-purple-600"; // 体験・遊び（デフォルト）
+
+                if (item.category === "たべる") {
+                    catEmoji = "🍟";
+                    bgColor = "bg-amber-400";
+                } else if (item.category === "つくる") {
+                    catEmoji = "🎨";
+                    bgColor = "bg-green-500";
+                } else if (item.category === "動かす") {
+                    catEmoji = "🏃";
+                    bgColor = "bg-red-500";
+                }
+
+                const badge = item.category ? `
+                    <div class="absolute top-2 right-2 ${bgColor} text-white px-2 py-1 rounded-lg shadow-xl z-30 flex items-center gap-1 scale-90 md:scale-100 font-black ring-1 ring-white">
+                        <span class="text-[10px] md:text-xs text-white">${catEmoji} ${item.category}</span>
+                    </div>
+                ` : "";
+
+                card.innerHTML = `
+                    ${badge}
+                    <div class="aspect-square bg-${item.color}-50 overflow-hidden rounded-xl mb-3">
+                        <img src="${item.img}" class="w-full h-full object-cover" style="object-position: ${item.pos || 'center'}" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
+                    </div>
+                    <h3 class="font-black text-sm">
+                        <i class="fas ${item.icon} mr-1 text-${item.color}-400"></i>${item.name}
+                    </h3>
+                    <p class="text-[10px] text-gray-500 mt-1 font-bold">${item.desc}</p>
+                `;
+                return card;
             }
-            // 「体を動かしたい」の場合
-            else if (mood === "とにかく体を動かしたい！") {
-                // 候補が少なければ、その年齢の「全部楽しみたい！」から補充
-                if (candidates.length < 3) {
-                    const backups = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && (a.tags.includes("全部楽しみたい！") || a.tags.includes("ラクガキ車")));
-                    candidates = [...new Set([...candidates, ...backups])];
+
+            function renderShops() {
+                const gridMain = document.getElementById('shop-grid-main');
+                const gridCoop = document.getElementById('shop-grid-coop');
+                const gridCorp = document.getElementById('shop-grid-corp');
+                const coopHeader = document.getElementById('cooperation-header');
+                const corpHeader = document.getElementById('corporation-header');
+                if (gridMain.children.length > 0) return;
+                shops.forEach(shop => gridMain.appendChild(createCard(shop, "400", false)));
+                extra.forEach((item) => {
+                    const isExternal = item.url && item.url.startsWith('http');
+                    if (item.group === "main") {
+                        gridMain.appendChild(createCard(item, "300", isExternal));
+                    } else if (item.group === "coop") {
+                        coopHeader.classList.remove('hidden');
+                        gridCoop.appendChild(createCard(item, "300", true)); // 協力グループ以下は基本外部リンク扱い
+                    } else if (item.group === "corp") {
+                        corpHeader.classList.remove('hidden');
+                        gridCorp.appendChild(createCard(item, "300", true));
+                    }
+                });
+            }
+
+            // AIプランナー：起動修正とリトライ処理（鉄の掟）
+            async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
+                const delays = [1000, 2000, 4000, 8000, 16000];
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return await response.json();
+                } catch (err) {
+                    if (retries <= 0) throw err;
+                    const delay = delays[5 - retries] || backoff * 2;
+                    await new Promise(r => setTimeout(r, delay));
+                    return fetchWithRetry(url, options, retries - 1, delay);
                 }
             }
-            // その他の気分の場合
-            else {
-                // 候補が足りない場合、その年齢の他のアクティビティから補充
-                if (candidates.length < 3) {
-                    const ageMatches = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && !a.tags.includes("お腹が空いた！美味しいもの食べたい"));
-                    candidates = [...new Set([...candidates, ...ageMatches])];
+
+            async function generatePlan() {
+                const age = document.getElementById('child-age').value;
+                const mood = document.getElementById('child-mood').value;
+                const resArea = document.getElementById('result-area');
+                const loader = document.getElementById('loader-box');
+                const pContainer = document.getElementById('plan-container');
+
+                resArea.classList.remove('hidden');
+                loader.style.display = 'flex';
+                pContainer.innerHTML = '<p class="text-center text-gray-500 font-bold animate-pulse mb-4">AIがカタログ情報を元に、最高のプランを考え中...🤖💭</p>';
+
+                // 少し待機して「考え中」を演出
+                await new Promise(r => setTimeout(r, 1500));
+
+                // 正確なタグ定義（最新の提供データに基づく）
+                // 未就学児以上: ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！"]
+                // 小学校低学年以上: ["小学生低学年", "小学生高学年", "大人も楽しみたい！"]
+                const tagDefinition = {
+                    // --- 体動かす系 ---
+                    "yud": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "キックdeビンゴ"],
+                    "ust": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "10秒で身体が変わる"],
+                    "css": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "ストラックアウト"],
+                    "orgm": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "ボッチャ"],
+
+                    // --- ものづくり楽しむ系 ---
+                    "usk": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "キーホルダー作り"],
+                    "mnm": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "ハンドメイド雑貨"],
+                    "mld": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "オリジナルシール作り"],
+                    "akh": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "街づくりぬり絵"],
+                    "khe": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "オリジナルオイル作り"],
+                    "thb": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "スライム作り"],
+                    "gb": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "キャンドルトーチ作り"],
+
+                    // --- 食べる系 ---
+                    "pal": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "試食会"],
+                    "knr": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "ジャークチキン"],
+                    "369": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "野菜スープ"],
+                    "lpc": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "ブラジル料理"],
+                    "uop": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "串焼き"],
+                    "oyk": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "お好み焼き"],
+
+                    // --- 体験する／遊び系 ---
+                    "mypl": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "子ども記者クラブ"],
+                    "szk": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "ラクガキ車"],
+                    "tmp": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "ピアノ体験"],
+                    "npi": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "写真撮影"],
+                    "ngg": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "人形劇"],
+                    "fsb": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "消化訓練"],
+                    "fbe": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "パトカー試乗"],
+                    "enn": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "縁日でお菓子"],
+
+                    // --- その他 ---
+                    "yknr": ["大人も楽しみたい！", "全部楽しみたい！"],
+                    "tep": ["大人も楽しみたい！", "全部楽しみたい！"],
+                    "tks": ["大人も楽しみたい！", "全部楽しみたい！"],
+                    "tkp": ["大人も楽しみたい！", "全部楽しみたい！"]
+                };
+
+                const allActivities = [
+                    // 特別イベント（車、消防署）
+                    { id: "car-painting", name: "車に落書きしちゃおう！", image_name: "images/car.png", description: "本物の車にお絵描き体験！", url: "#catalog", tags: tagDefinition["szk"] },
+                    { id: "fire-dept", name: "船橋市消防局 東消防署", image_name: "images/911.jpg", description: "消防士さんと消火体験！", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html", tags: tagDefinition["fsb"] },
+
+                    // ショップリスト
+                    ...shops.map(s => {
+                        const tags = tagDefinition[s.id] || ["全部楽しみたい！"];
+                        const detail = tags[tags.length - 1]; // 最後に定義した具体的な活動内容
+                        return {
+                            id: s.id,
+                            name: s.name,
+                            image_name: s.img,
+                            description: (detail && detail.length > 4) ? detail : s.desc, // 具体的な活動があれば優先
+                            url: s.url || `${s.id}.html`,
+                            tags: tags
+                        };
+                    }),
+
+                    // エキストラリスト
+                    ...extra.map(e => {
+                        const tags = tagDefinition[e.id] || ["全部楽しみたい！"];
+                        const detail = tags[tags.length - 1];
+                        return {
+                            id: e.id,
+                            name: e.name,
+                            image_name: e.img,
+                            description: (detail && detail.length > 4) ? detail : e.desc,
+                            url: e.url || `${e.id}.html`,
+                            tags: tags
+                        };
+                    })
+                ];
+
+                // 重複排除（IDベース）
+                const uniqueActivities = Array.from(new Map(allActivities.map(item => [item.id || item.name, item])).values());
+
+                let steps = [];
+
+                // 1. 年齢と気分による厳格なフィルタリング
+                let candidates = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && a.tags.includes(mood));
+
+                // 「美味しいもの」の場合は、食べる系以外を絶対に入れない
+                if (mood === "お腹が空いた！美味しいもの食べたい") {
+                    // 追加緩和なし
                 }
-                // それでも足りない場合は、その年齢の「全部楽しみたい！」を追加
-                if (candidates.length < 3) {
-                    const general = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && a.tags.includes("全部楽しみたい！"));
-                    candidates = [...new Set([...candidates, ...general])];
+                // 「体を動かしたい」の場合
+                else if (mood === "とにかく体を動かしたい！") {
+                    // 候補が少なければ、その年齢の「全部楽しみたい！」から補充
+                    if (candidates.length < 3) {
+                        const backups = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && (a.tags.includes("全部楽しみたい！") || a.tags.includes("ラクガキ車")));
+                        candidates = [...new Set([...candidates, ...backups])];
+                    }
                 }
-            }
+                // その他の気分の場合
+                else {
+                    // 候補が足りない場合、その年齢の他のアクティビティから補充
+                    if (candidates.length < 3) {
+                        const ageMatches = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && !a.tags.includes("お腹が空いた！美味しいもの食べたい"));
+                        candidates = [...new Set([...candidates, ...ageMatches])];
+                    }
+                    // それでも足りない場合は、その年齢の「全部楽しみたい！」を追加
+                    if (candidates.length < 3) {
+                        const general = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && a.tags.includes("全部楽しみたい！"));
+                        candidates = [...new Set([...candidates, ...general])];
+                    }
+                }
 
-            // 2. 年齢による優先順位付け（フィルタリング後の候補の中から）
-            // 年齢タグが含まれているものを優先的に上位へ
-            candidates.sort((a, b) => {
-                const aHasAge = a.tags.includes(age) ? 1 : 0;
-                const bHasAge = b.tags.includes(age) ? 1 : 0;
-                return bHasAge - aHasAge;
-            });
+                // 2. 年齢による優先順位付け（フィルタリング後の候補の中から）
+                // 年齢タグが含まれているものを優先的に上位へ
+                candidates.sort((a, b) => {
+                    const aHasAge = a.tags.includes(age) ? 1 : 0;
+                    const bHasAge = b.tags.includes(age) ? 1 : 0;
+                    return bHasAge - aHasAge;
+                });
 
-            // 3. ランダム選択（上位から候補を選ぶが、少しランダム性を持たせる）
-            // 上位5件くらいから3つ選ぶ
-            const topCandidates = candidates.slice(0, 5);
-            steps = topCandidates.sort(() => 0.5 - Math.random()).slice(0, 3).map(a => ({
-                title: a.name,
-                description: a.description,
-                image_name: a.image_name,
-                url: a.url
-            }));
-
-            // 万が一候補がゼロの場合のフェイルセーフ
-            if (steps.length === 0) {
-                steps = uniqueActivities.slice(0, 3).map(a => ({
+                // 3. ランダム選択（上位から候補を選ぶが、少しランダム性を持たせる）
+                // 上位5件くらいから3つ選ぶ
+                const topCandidates = candidates.slice(0, 5);
+                steps = topCandidates.sort(() => 0.5 - Math.random()).slice(0, 3).map(a => ({
                     title: a.name,
                     description: a.description,
                     image_name: a.image_name,
                     url: a.url
                 }));
-            }
 
-            loader.style.display = 'none';
-            pContainer.innerHTML = '';
+                // 万が一候補がゼロの場合のフェイルセーフ
+                if (steps.length === 0) {
+                    steps = uniqueActivities.slice(0, 3).map(a => ({
+                        title: a.name,
+                        description: a.description,
+                        image_name: a.image_name,
+                        url: a.url
+                    }));
+                }
 
-            if (steps.length > 0) {
-                // 提案メッセージ
-                const message = document.createElement('div');
-                message.className = "mb-4 text-center font-bold text-purple-600";
-                message.innerHTML = `「${age}」で「${mood}」あなたへ、<br>カタログから厳選したおすすめプランだよ！`;
-                pContainer.appendChild(message);
+                loader.style.display = 'none';
+                pContainer.innerHTML = '';
 
-                steps.forEach((s, i) => {
-                    const link = document.createElement('a');
-                    link.href = s.url;
-                    if (s.url.startsWith('http')) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
-                    else if (s.url === '#catalog') { link.href = "#catalog"; }
+                if (steps.length > 0) {
+                    // 提案メッセージ
+                    const message = document.createElement('div');
+                    message.className = "mb-4 text-center font-bold text-purple-600";
+                    message.innerHTML = `「${age}」で「${mood}」あなたへ、<br>カタログから厳選したおすすめプランだよ！`;
+                    pContainer.appendChild(message);
 
-                    link.className = "flex items-center gap-4 bg-white p-4 rounded-2xl border-2 border-purple-100 shadow-sm animate-float card-hover block transition-all mb-3";
-                    link.style.animationDelay = `${i * 0.2}s`;
-                    link.innerHTML = `
+                    steps.forEach((s, i) => {
+                        const link = document.createElement('a');
+                        link.href = s.url;
+                        if (s.url.startsWith('http')) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
+                        else if (s.url === '#catalog') { link.href = "#catalog"; }
+
+                        link.className = "flex items-center gap-4 bg-white p-4 rounded-2xl border-2 border-purple-100 shadow-sm animate-float card-hover block transition-all mb-3";
+                        link.style.animationDelay = `${i * 0.2}s`;
+                        link.innerHTML = `
                         <div class="w-16 h-16 flex-shrink-0 overflow-hidden rounded-xl bg-gray-200">
                             <img src="${s.image_name}" class="w-full h-full object-cover" onerror="this.src='images/logo.png';">
                         </div>
@@ -755,19 +911,19 @@
                             <div class="font-black text-gray-800 text-sm leading-tight">${s.title}</div>
                             <div class="text-[10px] text-gray-500 font-bold mt-1">${s.description}</div>
                         </div>`;
-                    pContainer.appendChild(link);
-                });
-            } else {
-                pContainer.innerHTML = "<p class='text-center font-bold text-gray-400'>ごめんね、条件に合うプランが見つからなかったよ...条件を変えて試してみて！</p>";
+                        pContainer.appendChild(link);
+                    });
+                } else {
+                    pContainer.innerHTML = "<p class='text-center font-bold text-gray-400'>ごめんね、条件に合うプランが見つからなかったよ...条件を変えて試してみて！</p>";
+                }
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', renderShops);
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-    </script>
+            document.addEventListener('DOMContentLoaded', renderShops);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        </script>
 </body>
 
 </html>
