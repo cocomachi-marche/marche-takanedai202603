@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ココまちマルシェ in 高根台 | 3/22(日)開催！</title>
     <meta name="description" content="3月22日(日) 高根台公民館で開催！車に落書き！？消防士体験！？子どもの「やりたい！」が全部叶う,最高の体験型マルシェ！">
-    
+    <link rel="icon" href="images/rogo2.png" type="image/png">
+
     <!-- 高速化：メイン画像をプリロード -->
     <link rel="preload" as="image" href="images/header.png">
 
@@ -14,7 +16,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
 
     <style>
         body {
@@ -22,37 +26,53 @@
             background-color: #FFFDF5;
             scroll-behavior: smooth;
         }
+
         .font-hand {
             font-family: 'Yusei Magic', sans-serif;
         }
+
         .bg-pattern {
             background-image: radial-gradient(#FCD34D 2px, transparent 2px);
             background-size: 20px 20px;
         }
+
         .text-shadow-pop {
             text-shadow: 3px 3px 0px #F59E0B;
         }
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
+
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
+
         .reveal-on-scroll {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
+
         .reveal-on-scroll.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         .btn-sparkle-gold {
             position: relative;
             overflow: hidden;
             animation: float-btn 3s ease-in-out infinite;
         }
+
         .btn-sparkle-gold::after {
             content: '';
             position: absolute;
@@ -64,15 +84,33 @@
             transform: rotate(30deg);
             animation: shine-swipe 3s infinite;
         }
+
         @keyframes float-btn {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-5px) scale(1.03); }
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-5px) scale(1.03);
+            }
         }
+
         @keyframes shine-swipe {
-            0% { left: -60%; }
-            15% { left: 120%; }
-            100% { left: 120%; }
+            0% {
+                left: -60%;
+            }
+
+            15% {
+                left: 120%;
+            }
+
+            100% {
+                left: 120%;
+            }
         }
+
         .loader {
             border: 4px solid #f3f3f3;
             border-top: 4px solid #F59E0B;
@@ -81,59 +119,81 @@
             height: 30px;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
+
         .logo-blend {
             mix-blend-mode: multiply;
         }
+
         .rainbow-text {
             background: linear-gradient(to right, #FF5F6D, #FFC371, #48c6ef, #6f86d6);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .card-hover:hover {
             transform: translateY(-5px) scale(1.02);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
+
         .hidden-view {
             display: none;
         }
     </style>
 </head>
+
 <body class="text-gray-800 antialiased overflow-x-hidden">
 
     <!-- 【画面：ホーム】 -->
     <div id="home-view">
-        <header class="relative pt-12 pb-16 text-center overflow-hidden bg-gray-800 min-h-[550px] flex flex-col justify-center items-center group">
+        <header
+            class="relative pt-12 pb-16 text-center overflow-hidden bg-gray-800 min-h-[550px] flex flex-col justify-center items-center group">
             <div class="absolute inset-0 z-0 overflow-hidden">
-                <img id="header-bg" src="images/header.png" alt="ヘッダー背景" 
-                     class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-110" 
-                     onerror="this.src='https://placehold.co/1200x800/3b82f6/white?text=%E3%82%B3%E3%82%B3%E3%81%BE%E3%81%A1%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7';">
+                <img id="header-bg" src="images/header.png" alt="ヘッダー背景"
+                    class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-110"
+                    onerror="this.src='https://placehold.co/1200x800/3b82f6/white?text=%E3%82%B3%E3%82%B3%E3%81%BE%E3%81%A1%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7';">
                 <div class="absolute inset-0 bg-black/40 z-10"></div>
             </div>
 
             <div class="container mx-auto px-4 relative z-20">
-                <p class="text-white font-black text-xl md:text-2xl mb-4 bg-pink-500 inline-block px-6 py-2 rounded-full transform -rotate-2 shadow-xl border-2 border-white animate-float">
+                <p
+                    class="text-white font-black text-xl md:text-2xl mb-4 bg-pink-500 inline-block px-6 py-2 rounded-full transform -rotate-2 shadow-xl border-2 border-white animate-float">
                     高根台公民館がテーマパークに！？
                 </p>
-                <h1 class="font-hand text-4xl md:text-7xl font-black text-white leading-tight mb-4 text-shadow-pop transform scale-100 hover:scale-105 transition duration-300">
+                <h1
+                    class="font-hand text-4xl md:text-7xl font-black text-white leading-tight mb-4 text-shadow-pop transform scale-100 hover:scale-105 transition duration-300">
                     『体験型』マルシェに<br>
                     <span class="text-yellow-300">全員集合〜！</span>
                 </h1>
-                <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 inline-block shadow-2xl max-w-md mx-auto w-full mt-4 border-4 border-yellow-400">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-xl p-4 inline-block shadow-2xl max-w-md mx-auto w-full mt-4 border-4 border-yellow-400">
                     <p class="font-black text-gray-700 text-xl md:text-2xl mb-1">📅 2026.3.22 (日)</p>
                     <p class="font-black text-gray-700 text-lg md:text-xl mb-2">⏰ 10:00 〜 15:00</p>
                     <p class="font-black text-gray-600 text-lg">📍 高根台公民館</p>
+                    <p class="font-black text-pink-500 text-3xl md:text-4xl mt-2 animate-pulse">✨ 入場無料 ✨</p>
+                    <p class="text-gray-500 font-bold text-sm md:text-base mt-2">※ 有料ブースあり</p>
                 </div>
                 <div class="mt-6 flex justify-center">
-                    <img src="images/logo.png" alt="ココまちマルシェロゴ" class="h-20 md:h-32 object-contain logo-blend animate-float" onerror="this.style.display='none';">
+                    <img src="images/logo.png" alt="ココまちマルシェロゴ"
+                        class="h-20 md:h-32 object-contain logo-blend animate-float"
+                        onerror="this.style.display='none';">
                 </div>
             </div>
             <div class="absolute bottom-0 w-full leading-none text-white z-20">
                 <svg class="block w-full h-8 md:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FFFDF5"></path>
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        fill="#FFFDF5"></path>
                 </svg>
             </div>
         </header>
@@ -141,10 +201,12 @@
         <section class="py-12 px-4 bg-pattern reveal-on-scroll">
             <div class="container mx-auto max-w-3xl text-center">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-700 mb-6">みんなでマルシェにいこう！😄</h2>
-                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 relative text-lg font-medium leading-relaxed">
-                    「いつもの公園は飽きちゃった…」<br>
-                    「せっかくの休み、子どもに何か<span class="text-pink-500 font-bold">普段できない体験</span>をさせたい！」<br>
-                    <p class="text-xl md:text-2xl font-bold text-blue-600 mt-4">その悩み、「ココまちマルシェ」が解決します！</p>
+                <div
+                    class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 relative text-lg font-medium leading-relaxed">
+                    <p class="text-xl md:text-2xl font-bold text-blue-600">
+                        学校では学べない体験！<br>
+                        街のみんなでつくりました！
+                    </p>
                 </div>
             </div>
         </section>
@@ -152,51 +214,151 @@
         <section class="py-16 px-4 bg-yellow-50 relative pb-16">
             <div class="container mx-auto max-w-4xl">
                 <!-- 車に落書きセクション -->
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-purple-500 reveal-on-scroll">
+                <div
+                    class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-purple-500 reveal-on-scroll">
                     <div class="bg-purple-500 text-white text-center py-2 font-black tracking-widest">★超目玉イベント★</div>
                     <div class="md:flex">
                         <div class="md:w-1/2 h-64 bg-gray-200 overflow-hidden relative">
-                            <img src="images/car.png" alt="車に落書き" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e9d5ff/6b21a8?text=images/car.png';">
+                            <img src="images/car.png" alt="車に落書き" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x400/e9d5ff/6b21a8?text=images/car.png';">
                         </div>
                         <div class="p-6 md:w-1/2 flex flex-col justify-center">
-                            <h3 class="text-2xl font-black text-purple-600 mb-3 flex items-center"><span class="text-3xl mr-2">🎨</span> 車に落書きしちゃおう！</h3>
+                            <h3 class="text-2xl font-black text-purple-600 mb-3 flex items-center"><span
+                                    class="text-3xl mr-2">🎨</span> 車に落書きしちゃおう！</h3>
                             <p class="text-gray-600 font-bold mb-4">本物の車をキャンバスに、思う存分お絵描きタイム！今日だけは特別！</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- 船橋市消防局 東消防署 セクション（フロントページ：fire.png） -->
-                <a href="https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" target="_blank" rel="noopener noreferrer" class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-red-500 reveal-on-scroll block card-hover transition-all duration-300">
+                <a href="https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-white rounded-3xl shadow-xl overflow-hidden mb-12 border-b-8 border-red-500 reveal-on-scroll block card-hover transition-all duration-300">
                     <div class="md:flex flex-row-reverse">
                         <div class="md:w-1/2 h-64 bg-red-100 overflow-hidden relative">
-                            <img src="images/fire.png" alt="消防士体験" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/fecaca/991b1b?text=images/fire.png';">
+                            <img src="images/fire.png" alt="消防士体験" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x400/fecaca/991b1b?text=images/fire.png';">
                         </div>
                         <div class="p-6 md:w-1/2 flex flex-col justify-center">
-                            <h3 class="text-2xl font-black text-red-600 mb-3 flex items-center"><span class="text-3xl mr-2">👨‍🚒</span> 憧れのヒーロー登場！</h3>
+                            <h3 class="text-2xl font-black text-red-600 mb-3 flex items-center"><span
+                                    class="text-3xl mr-2">👨‍🚒</span> 憧れのヒーロー登場！</h3>
                             <p class="text-gray-600 font-bold mb-4">船橋市消防局 東消防署の消防士さんと一緒に消火器の模擬体験！本物の迫力を肌で感じよう。</p>
                             <p class="text-xs text-gray-400 font-bold italic">協力：船橋市消防局 東消防署</p>
                         </div>
                     </div>
                 </a>
 
-                <div class="mt-12 text-center max-sm mx-auto reveal-on-scroll">
-                    <button onclick="switchView('shops')" class="btn-sparkle-gold w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-black py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform active:scale-95 transition-all text-xl">
-                        すべての体験をチェック！ ✨
-                    </button>
+
+            </div>
+        </section>
+
+
+        <!-- カタログセクション（旧ショップビュー） -->
+        <section id="catalog" class="py-16 px-4 bg-white relative">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 text-center rainbow-text reveal-on-scroll">体験カタログ</h2>
+                <p class="text-xl md:text-2xl font-bold text-gray-600 mt-2 mb-12 text-center reveal-on-scroll">出展者とブース内容
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 reveal-on-scroll">
+                    <a href="szk.html"
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-pink-400 card-hover block">
+                        <img src="images/szk.png" alt="スズキオート京葉" class="aspect-video object-cover w-full"
+                            onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/szk.png';">
+                        <div class="p-6">
+                            <h2 class="text-xl font-black mb-2"><i class="fas fa-car text-pink-500 mr-2"></i>スズキオート京葉
+                            </h2>
+                            <p class="text-gray-600 font-bold">ほんものの車にたくさん落書きをして、記念撮影をしよう！<br>コリントンゲーム、セニアカーの展示もあるよ！</p>
+                        </div>
+                    </a>
+                    <a href="pal.html"
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-green-400 card-hover block">
+                        <img src="images/pal.png" alt="パルシステム" class="aspect-video object-cover w-full"
+                            onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/pal.png';">
+                        <div class="p-6">
+                            <h2 class="text-xl font-black mb-2"><i class="fas fa-truck text-green-500 mr-2"></i>パルシステム千葉
+                            </h2>
+                            <p class="text-gray-600 font-bold">こんせんくんがやってくる！ヨーグルトやプリンを試食しよう！</p>
+                        </div>
+                    </a>
+                    <a href="mypl.html"
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-yellow-400 card-hover block">
+                        <img src="images/mypl.png" alt="まいぷれ編集部" class="aspect-video object-cover w-full"
+                            onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/mypl.png';">
+                        <div class="p-6">
+                            <h2 class="text-xl font-black mb-2"><i class="fas fa-edit text-yellow-500 mr-2"></i>まいぷれ編集部
+                            </h2>
+                            <p class="text-gray-600 font-bold">まいぷれ編集部と一緒にイベント内を取材しよう！</p>
+                        </div>
+                    </a>
+                    <a href="yud.html"
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-blue-400 card-hover block">
+                        <img src="images/ydk.png" alt="稀石浴 温どこ" class="aspect-video object-cover w-full"
+                            onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/ydk.png';">
+                        <div class="p-6">
+                            <h2 class="text-xl font-black mb-2"><i class="fas fa-bath text-blue-500 mr-2"></i>稀石浴 温どこ
+                            </h2>
+                            <p class="text-gray-600 font-bold">サッカーゲームと美味しいアイスクリームが待ってるよ！</p>
+                        </div>
+                    </a>
                 </div>
+
+                <!-- 3行目：Le Petit Cafe を単独（スズキオート京葉と同サイズ）で配置 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 reveal-on-scroll">
+                    <a href="lpc.html"
+                        class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-orange-400 card-hover block">
+                        <img src="images/shops/lpc/main.jpeg" alt="Le Petit Cafe"
+                            class="aspect-video object-cover w-full"
+                            onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=Le+Petit+Cafe';">
+                        <div class="p-6">
+                            <h2 class="text-xl font-black mb-2"><i class="fas fa-coffee text-orange-500 mr-2"></i>Le
+                                Petit Cafe
+                            </h2>
+                            <p class="text-gray-600 font-bold">ブラジルの雰囲気を味わおう！おいしいスイーツが待ってるよ！</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- メインのグリッド（行3〜行6に対応） -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal-on-scroll" id="shop-grid-main"></div>
+
+                <!-- 協力グループ挿入セクション（6行目と7行目の間） -->
+                <div id="cooperation-header" class="hidden reveal-on-scroll">
+                    <h2
+                        class="text-2xl md:text-3xl font-black mt-16 mb-8 text-center text-gray-700 bg-white inline-block px-10 py-3 rounded-full shadow-sm border-2 border-purple-200 mx-auto block w-fit">
+                        協力グループ</h2>
+                </div>
+
+                <!-- 協力グループのグリッド（行7に対応） -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal-on-scroll" id="shop-grid-coop"></div>
+
+                <!-- 協力企業挿入セクション（7行目と8行目の間） -->
+                <div id="corporation-header" class="hidden reveal-on-scroll">
+                    <h2
+                        class="text-2xl md:text-3xl font-black mt-16 mb-8 text-center text-gray-700 bg-white inline-block px-10 py-3 rounded-full shadow-sm border-2 border-blue-200 mx-auto block w-fit">
+                        協力企業・団体</h2>
+                </div>
+
+                <!-- 協力企業のグリッド（行8に対応：カタログは 911.jpg） -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal-on-scroll" id="shop-grid-corp"></div>
+
+                <p class="mt-12 text-center text-gray-500 font-bold italic reveal-on-scroll">他にも楽しい体験がいっぱい待ってるよ！</p>
             </div>
         </section>
 
         <!-- AIプランナーセクション -->
-        <section id="ai-planner" class="py-16 px-4 bg-gradient-to-r from-violet-100 to-purple-100 border-t-4 border-violet-300 reveal-on-scroll">
+        <section id="ai-planner"
+            class="py-16 px-4 bg-gradient-to-r from-violet-100 to-purple-100 border-t-4 border-violet-300 reveal-on-scroll">
             <div class="container mx-auto max-w-3xl text-center">
                 <div class="flex justify-center items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-blue-400 rounded-full border-4 border-white shadow-lg relative overflow-hidden flex items-center justify-center">
+                    <div
+                        class="w-16 h-16 bg-blue-400 rounded-full border-4 border-white shadow-lg relative overflow-hidden flex items-center justify-center">
                         <div class="w-12 h-12 bg-white rounded-full absolute -bottom-6"></div>
                         <div class="w-2 h-2 bg-gray-800 rounded-full absolute top-6 left-5"></div>
                         <div class="w-2 h-2 bg-gray-800 rounded-full absolute top-6 right-5"></div>
                     </div>
-                    <div class="w-16 h-16 bg-pink-400 rounded-full border-4 border-white shadow-lg relative overflow-hidden flex items-center justify-center">
+                    <div
+                        class="w-16 h-16 bg-pink-400 rounded-full border-4 border-white shadow-lg relative overflow-hidden flex items-center justify-center">
                         <div class="w-12 h-12 bg-white rounded-full absolute -bottom-6"></div>
                         <div class="w-2 h-2 bg-gray-800 rounded-full absolute top-6 left-5"></div>
                         <div class="w-2 h-2 bg-gray-800 rounded-full absolute top-6 right-5"></div>
@@ -205,12 +367,13 @@
 
                 <h2 class="text-3xl md:text-4xl font-black text-purple-600 mb-4">AIわくわくプランナー</h2>
                 <p class="text-gray-700 font-bold mb-8 italic text-sm">あなただけの「最高の体験コース」を提案！</p>
-                
+
                 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border-4 border-purple-200 text-left">
                     <div class="grid md:grid-cols-2 gap-4 mb-6">
                         <div>
                             <label class="block text-purple-700 font-bold mb-2 text-sm ml-2">お子様の年齢は？</label>
-                            <select id="child-age" class="w-full bg-gray-50 border-2 border-purple-100 rounded-xl p-3 font-bold text-gray-700 focus:outline-none focus:border-purple-400">
+                            <select id="child-age"
+                                class="w-full bg-gray-50 border-2 border-purple-100 rounded-xl p-3 font-bold text-gray-700 focus:outline-none focus:border-purple-400">
                                 <option value="未就学児（3〜5歳）">未就学児（3〜5歳）</option>
                                 <option value="小学生低学年">小学生低学年</option>
                                 <option value="小学生高学年">小学生高学年</option>
@@ -219,7 +382,8 @@
                         </div>
                         <div>
                             <label class="block text-purple-700 font-bold mb-2 text-sm ml-2">今の気分は？</label>
-                            <select id="child-mood" class="w-full bg-gray-50 border-2 border-purple-100 rounded-xl p-3 font-bold text-gray-700 focus:outline-none focus:border-purple-400">
+                            <select id="child-mood"
+                                class="w-full bg-gray-50 border-2 border-purple-100 rounded-xl p-3 font-bold text-gray-700 focus:outline-none focus:border-purple-400">
                                 <option value="とにかく体を動かしたい！">とにかく体を動かしたい！</option>
                                 <option value="何かを作ったり描いたりしたい">何かを作ったり描いたりしたい</option>
                                 <option value="お腹が空いた！美味しいもの食べたい">お腹が空いた！美味しいもの食べたい</option>
@@ -228,14 +392,18 @@
                         </div>
                     </div>
 
-                    <button onclick="generatePlan()" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-black text-xl py-4 rounded-xl shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity">
+                    <button onclick="generatePlan()"
+                        class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-black text-xl py-4 rounded-xl shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity">
                         <span class="mr-2">プランをAIに聞いてみる！</span> <i class="fas fa-magic"></i>
                     </button>
 
                     <div id="result-area" class="mt-8 hidden overflow-hidden">
-                        <div class="flex justify-center mb-4" id="loader-box"><div class="loader"></div></div>
+                        <div class="flex justify-center mb-4" id="loader-box">
+                            <div class="loader"></div>
+                        </div>
                         <div id="plan-container" class="grid gap-4 text-left"></div>
-                        <button onclick="document.getElementById('result-area').classList.add('hidden')" class="mt-6 text-purple-500 font-bold hover:underline w-full text-center">回答を閉じる</button>
+                        <button onclick="document.getElementById('result-area').classList.add('hidden')"
+                            class="mt-6 text-purple-500 font-bold hover:underline w-full text-center">回答を閉じる</button>
                     </div>
                 </div>
             </div>
@@ -245,84 +413,81 @@
         <div class="bg-white py-12 px-4 flex flex-col items-center gap-6 border-t border-gray-100 reveal-on-scroll">
             <h3 class="text-xl font-black text-gray-600">最新情報はこちらをチェック！✨</h3>
             <div class="flex justify-center gap-4 md:gap-8">
-                <a href="https://www.instagram.com/cocomachi.marche?igsh=dmkwdGl6Ynd1bzhy" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-gradient-to-br from-[#405DE6] via-[#E1306C] to-[#FFDC80] text-white px-8 py-3 rounded-full text-sm md:text-base font-black shadow-lg hover:shadow-xl active:scale-95 transition-all">
+                <a href="https://www.instagram.com/cocomachi.marche?igsh=dmkwdGl6Ynd1bzhy" target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2 bg-gradient-to-br from-[#405DE6] via-[#E1306C] to-[#FFDC80] text-white px-8 py-3 rounded-full text-sm md:text-base font-black shadow-lg hover:shadow-xl active:scale-95 transition-all">
                     <i class="fab fa-instagram text-xl"></i> Instagram
                 </a>
-                <a href="https://lin.ee/qkWcbQ2" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#06C755] text-white px-8 py-3 rounded-full text-sm md:text-base font-black shadow-lg hover:shadow-xl active:scale-95 transition-all">
+                <a href="https://lin.ee/qkWcbQ2" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 bg-[#06C755] text-white px-8 py-3 rounded-full text-sm md:text-base font-black shadow-lg hover:shadow-xl active:scale-95 transition-all">
                     <i class="fab fa-line text-xl"></i> 公式LINE
                 </a>
             </div>
         </div>
+
+        <!-- チラシ・インフォメーションセクション -->
+        <section class="py-16 px-4 bg-gradient-to-b from-yellow-50 to-white reveal-on-scroll">
+            <div class="container mx-auto max-w-4xl text-center">
+                <a href="#catalog"
+                    class="bg-white p-3 md:p-6 rounded-3xl shadow-2xl border-4 border-yellow-300 inline-block transform transition hover:scale-[1.01] duration-300 cursor-pointer block">
+                    <img src="images/spt.png" alt="イベント案内" class="w-full h-auto rounded-xl">
+                </a>
+            </div>
+        </section>
+
+        <!-- ココまちマルシェについてセクション（フッター直上に移動） -->
+        <section class="py-16 px-4 bg-yellow-50 reveal-on-scroll">
+            <div class="container mx-auto max-w-3xl">
+                <div
+                    class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-4 border-orange-200 text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-orange-300 to-yellow-300">
+                    </div>
+
+                    <h2
+                        class="text-2xl md:text-3xl font-black text-orange-500 mb-8 inline-block border-b-4 border-orange-200 pb-2">
+                        <i class="fas fa-heart mr-2 text-pink-400"></i>ココまちマルシェについて
+                    </h2>
+
+                    <div class="text-left md:text-center text-gray-700 font-medium leading-loose space-y-6">
+                        <p>
+                            ココまちマルシェは、子どもたちの「やってみたい！」をきっかけに、<br class="hidden md:inline">
+                            地域の商店や暮らしに触れながら学べる体験型イベントです。<br>
+                            会場には親子で楽しめるワークショップや体験ブースが並び、<br class="hidden md:inline">
+                            子どもたちは遊びのように夢中になりながら、「できた！」という達成感を積み重ねていきます。
+                        </p>
+                        <p>
+                            また、このマルシェは楽しさだけでなく、<br class="hidden md:inline">
+                            防災・防犯への意識や、地域のつながりを育てることも大切にしています。<br>
+                            保護者の皆さまにとっても、地域の人との“顔の見える関係”が増え、<br class="hidden md:inline">
+                            安心して暮らせるまちづくりの一歩につながれば嬉しいです。
+                        </p>
+                        <p class="text-lg font-bold text-orange-600">
+                            子どもも大人も、気づけば心が満たされて、前向きになれる。<br>
+                            そんな時間をお届けできるマルシェを目指しています。
+                        </p>
+                    </div>
+
+                    <div class="mt-10 text-right">
+                        <p class="font-hand text-xl md:text-2xl font-black text-gray-600">
+                            街づくり支援チーム face
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- 【画面：ショップカタログ】 -->
-    <div id="shops-view" class="hidden-view p-4 md:p-8">
-        <div class="max-w-6xl mx-auto">
-            <button onclick="switchView('home')" class="mb-8 flex items-center text-gray-500 font-bold hover:text-pink-500 transition-colors">
-                <i class="fas fa-arrow-left mr-2"></i> もどる
-            </button>
 
-            <h1 class="text-3xl md:text-5xl font-black mb-12 text-center md:text-left rainbow-text">体験カタログ</h1>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-                <a href="szk.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-pink-400 card-hover block">
-                    <img src="images/szk.png" alt="スズキオート京葉" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/szk.png';">
-                    <div class="p-6">
-                        <h2 class="text-xl font-black mb-2"><i class="fas fa-car text-pink-500 mr-2"></i>スズキオート京葉</h2>
-                        <p class="text-gray-600 font-bold">ほんものの車にたくさん落書きをして、記念撮影をしよう！</p>
-                    </div>
-                </a>
-                <a href="pal.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-green-400 card-hover block">
-                    <img src="images/pal.png" alt="パルシステム" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/pal.png';">
-                    <div class="p-6">
-                        <h2 class="text-xl font-black mb-2"><i class="fas fa-truck text-green-500 mr-2"></i>パルシステム千葉</h2>
-                        <p class="text-gray-600 font-bold">こんせんくんがやってくる！美味しい体験も！？</p>
-                    </div>
-                </a>
-                <a href="mypl.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-yellow-400 card-hover block">
-                    <img src="images/mypl.png" alt="まいぷれ編集部" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/mypl.png';">
-                    <div class="p-6">
-                        <h2 class="text-xl font-black mb-2"><i class="fas fa-edit text-yellow-500 mr-2"></i>まいぷれ編集部</h2>
-                        <p class="text-gray-600 font-bold">まいぷれ編集部と一緒にイベント内を取材しよう！</p>
-                    </div>
-                </a>
-                <a href="yud.html" class="bg-white rounded-3xl shadow-lg overflow-hidden border-b-8 border-blue-400 card-hover block">
-                    <img src="images/yud.png" alt="船橋の銭湯 湯どこ" class="aspect-video object-cover w-full" onerror="this.src='https://placehold.co/600x400/f3f4f6/9ca3af?text=images/yud.png';">
-                    <div class="p-6">
-                        <h2 class="text-xl font-black mb-2"><i class="fas fa-bath text-blue-500 mr-2"></i>船橋の銭湯 湯どこ</h2>
-                        <p class="text-gray-600 font-bold">お風呂屋さんの楽しい体験が待ってるよ。</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- メインのグリッド（行3〜行6に対応） -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid-main"></div>
-            
-            <!-- 協力グループ挿入セクション（6行目と7行目の間） -->
-            <div id="cooperation-header" class="hidden">
-                <h2 class="text-2xl md:text-3xl font-black mt-16 mb-8 text-center text-gray-700 bg-white inline-block px-10 py-3 rounded-full shadow-sm border-2 border-purple-200 mx-auto block w-fit">協力グループ</h2>
-            </div>
-            
-            <!-- 協力グループのグリッド（行7に対応） -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid-coop"></div>
-
-            <!-- 協力企業挿入セクション（7行目と8行目の間） -->
-            <div id="corporation-header" class="hidden">
-                <h2 class="text-2xl md:text-3xl font-black mt-16 mb-8 text-center text-gray-700 bg-white inline-block px-10 py-3 rounded-full shadow-sm border-2 border-blue-200 mx-auto block w-fit">協力企業・団体</h2>
-            </div>
-
-            <!-- 協力企業のグリッド（行8に対応：カタログは 911.jpg） -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="shop-grid-corp"></div>
-            
-            <p class="mt-12 text-center text-gray-500 font-bold italic">他にも楽しい体験がいっぱい待ってるよ！</p>
-        </div>
-    </div>
 
     <!-- 共通フッター -->
     <footer class="bg-yellow-400 py-16 px-4 text-center text-white mt-0">
         <h2 class="text-2xl font-black mb-4 tracking-widest">3月22日は、高根台公民館に全員集合！</h2>
         <p class="text-white font-bold italic mb-4">楽しい体験がいっぱい待ってるよ！</p>
         <p class="text-white font-bold text-sm mb-4">後援：船橋市・船橋市教育委員会</p>
+        <div class="inline-block text-left text-white font-bold text-sm mb-4">
+            <p class="mb-1">協力：高根台地区社会福祉協議会</p>
+            <p class="pl-[3.5em]">高根台プラザ商店街</p>
+        </div>
         <div class="font-bold text-sm mt-8">&copy; 2026 ココまちマルシェ実行委員会</div>
     </footer>
 
@@ -331,44 +496,36 @@
 
         // ショップリスト
         const shops = [
-            { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "ジャークチキン！" },
-            { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "楽しいアートの世界！" },
-            { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分だけの作品作り。" },
-            { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "お家のデザイン体験！" },
-            { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-gem", color: "yellow", desc: "暮らしを彩るアイテム！" },
-            { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "美味しい洋食バル！" },
-            { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚体験！" },
-            { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "オリジナル雑貨を作ろう！" },
+            { id: "knr", name: "Cafe Kinari", img: "images/knr.png", icon: "fa-coffee", color: "indigo", desc: "おいしいジャークチキンを食べよう！" },
+            { id: "usk", name: "U-suke", img: "images/usk.jpg", icon: "fa-palette", color: "orange", desc: "世界的アーティストU-sukeとキーホルダーをつくろう！" },
+            { id: "mld", name: "えむらぼデザイン", img: "images/mld.png", icon: "fa-palette", color: "cyan", desc: "自分で描いたイラストをシールにしよう！" },
+            { id: "akh", name: "旭化成ホームズ", img: "images/akh.png", icon: "fa-home", color: "rose", desc: "家に色をつけてみんなの街をつくろう！" },
+            { id: "yknr", name: "耳つぼジュエリーkinari", img: "images/yknr.png", icon: "fa-gem", color: "yellow", desc: "キラキラ オシャレに変身しよう！" },
+            { id: "369", name: "洋食堂バル369", img: "images/yb3.png", icon: "fa-utensils", color: "red", desc: "行列のできる洋食屋バルのスープを飲んで温まろう！" },
+            { id: "uop", name: "魚人+", img: "images/uop.png", icon: "fa-fish", color: "green", desc: "新鮮なお魚体験！", url: "uchu.html" },
+            { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "自分だけの特別な作品をつくろう！" },
             { id: "npi", name: "Natural Portrait", img: "images/npi.png", icon: "fa-camera", color: "amber", desc: "みんなで思い出を残そう！" },
-            { id: "tmp", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "楽しくダンス！" },
-            { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "お肌をピカピカに！" }
+            { id: "tmp", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "ピアノやバイオリンなどの楽器を引いてみよう！" },
+            { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "好きな香りでオリジナルオイル作り" },
+            { id: "ust", name: "ヨガスタジオ U-studio", img: "images/ust.png", icon: "fa-person-running", color: "purple", desc: "１０秒で.腕相撲(うでずもう)が強くなる！？.身体がやわらかくなる！" }
+
         ];
 
         const extra = [
             { id: "oyk", name: "お好み焼き きんいろ", img: "images/oyk.png", icon: "fa-utensils", color: "orange", desc: "ふわとろお好み焼き！" },
-            { id: "pottery", name: "陶芸・土遊び", img: "images/pot.png", icon: "fa-hand-holding-droplet", color: "orange", desc: "土の感触で器作り！" },
-            { id: "nail", name: "こどもネイル", img: "images/nail.png", icon: "fa-hand-sparkles", color: "pink", desc: "指先をデコ！" },
-            { id: "flower", name: "花アレンジ", img: "images/flower.png", icon: "fa-seedling", color: "emerald", desc: "飾り作り！" },
-            { id: "nga", name: "似顔絵コーナー", img: "images/nga.png", icon: "fa-palette", color: "amber", desc: "似顔絵！" },
-            { id: "ngg", name: "船橋地区アマチュア人形劇連合会", img: "images/ngg.jpg", icon: "fa-masks-theater", color: "purple", desc: "人形劇を見て、自分だけの人形を作ろう！" },
-            { id: "thb", name: "東邦大学ボランティア部", img: "images/thb.jpeg", icon: "fa-flask", color: "blue", desc: "みんなでスライムをつくろう！", url: "https://www.instagram.com/tohovolunteer/" },
-            { id: "orgm", name: "おりがみ", img: "images/orgm.jpg", icon: "fa-shapes", color: "yellow", desc: "ワクワク楽しくボッチャ体験！", url: "https://origami-vol.or.jp/student/?gad_source=1&gad_campaignid=23360419821&gbraid=0AAAAAplm0FAnAloM9tPeqKDWmzQRtDsO1&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMR5jfuBqEv0HMDLbv6ZDdydbSEVDpQF7vu1xButVDSzcDHp39aPLoaAuX1EALw_wcB" },
-            { id: "gb", name: "グリーンベース", img: "images/gb.jpg", icon: "fa-leaf", color: "green", desc: "竹をドリルで加工しよう！", url: "https://www.instagram.com/_green.base/" },
-            { id: "tep", name: "TEPLUS", img: "images/tpm2.jpeg", icon: "fa-laptop-code", color: "slate", desc: "オンラインであなたのビジネスを支えます！", url: "https://teplus.my.canva.site/" },
-            { id: "fsb", name: "船橋市消防局 東消防署", img: "images/911.jpg", icon: "fa-fire-extinguisher", color: "red", desc: "消防士さんと消火体験！本物の迫力を間近で。", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" }
-        ];
+            { id: "enn", name: "縁日ブース", img: "images/en.png", icon: "fa-bullseye", color: "red", desc: "射的、型抜き、人形すくい、輪投げを楽しもう！" },
+            { id: "css", name: "千葉スカイセイラーズ", img: "images/logo.png", icon: "fa-baseball-bat-ball", color: "blue", desc: "プロ野球選手とストラックアウトに挑戦！", url: "https://sky-sailors.com/" },
 
-        function switchView(view) {
-            window.scrollTo(0, 0);
-            if (view === 'home') {
-                document.getElementById('home-view').classList.remove('hidden-view');
-                document.getElementById('shops-view').classList.add('hidden-view');
-            } else {
-                document.getElementById('home-view').classList.add('hidden-view');
-                document.getElementById('shops-view').classList.remove('hidden-view');
-                renderShops();
-            }
-        }
+            { id: "ngg", name: "船橋地区アマチュア人形劇連合会", img: "images/ngg.png", icon: "fa-masks-theater", color: "purple", desc: "人形劇を見て、自分だけの人形を作ろう！", pos: "left center" },
+            { id: "thb", name: "東邦大学ボランティア部", img: "images/thb.png", icon: "fa-flask", color: "blue", desc: "みんなでスライムをつくろう！", url: "https://www.instagram.com/tohovolunteer/" },
+            { id: "orgm", name: "おりがみ", img: "images/orgm.png", icon: "fa-shapes", color: "yellow", desc: "ワクワク楽しくボッチャ体験！", url: "https://origami-vol.or.jp/student/?gad_source=1&gad_campaignid=23360419821&gbraid=0AAAAAplm0FAnAloM9tPeqKDWmzQRtDsO1&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMR5jfuBqEv0HMDLbv6ZDdydbSEVDpQF7vu1xButVDSzcDHp39aPLoaAuX1EALw_wcB" },
+            { id: "gb", name: "グリーンベース", img: "images/gbt.png", icon: "fa-leaf", color: "green", desc: "竹をドリルで加工しよう！", url: "https://www.instagram.com/_green.base/" },
+            { id: "tep", name: "TEPLUS", img: "images/tpm2.jpeg", icon: "fa-laptop-code", color: "slate", desc: "オンラインであなたのビジネスを支えます！", url: "https://teplus.my.canva.site/" },
+            { id: "fsb", name: "船橋市消防局 東消防署", img: "images/911.jpg", icon: "fa-fire-extinguisher", color: "red", desc: "消防士さんと消火体験！本物の迫力を間近で。", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" },
+            { id: "tks", name: "高根台地区社会福祉協議会", img: "images/tks.png", icon: "fa-hand-holding-heart", color: "orange", desc: "地域のみんなで支え合い！活動紹介。", url: "#" },
+            { id: "tkp", name: "高根台プラザ商店街", img: "images/tkp.jpg", icon: "fa-shopping-bag", color: "blue", desc: "駅チカ 便利な商店街です！", url: "https://takanedai.shop/" },
+            { id: "fbe", name: "🚨千葉県 船橋東警察署", img: "images/tpl.png", icon: "fa-shield-halved", color: "slate", desc: "みんなの安全を守るパトカー、白バイがやってくる！", url: "https://www.police.pref.chiba.jp/police_department/funabashi_e/index.html" }
+        ];
 
         function createCard(item, colorClass = "400", isExternal = false) {
             const card = document.createElement('a');
@@ -377,7 +534,7 @@
             card.className = `bg-white rounded-2xl shadow-md p-4 border-b-4 border-${item.color}-${colorClass} card-hover block`;
             card.innerHTML = `
                 <div class="aspect-square bg-${item.color}-50 overflow-hidden rounded-xl mb-3">
-                    <img src="${item.img}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
+                    <img src="${item.img}" class="w-full h-full object-cover" style="object-position: ${item.pos || 'center'}" onerror="this.src='https://placehold.co/200x200/eee/999?text=${item.id}';">
                 </div>
                 <h3 class="font-black text-sm">
                     <i class="fas ${item.icon} mr-1 text-${item.color}-400"></i>${item.name}
@@ -396,8 +553,8 @@
             if (gridMain.children.length > 0) return;
             shops.forEach(shop => gridMain.appendChild(createCard(shop, "400", false)));
             extra.forEach((item, index) => {
-                if (index <= 4) gridMain.appendChild(createCard(item, "300", false));
-                else if (index <= 8) { coopHeader.classList.remove('hidden'); gridCoop.appendChild(createCard(item, "300", true)); }
+                if (index <= 2) gridMain.appendChild(createCard(item, "300", item.url && item.url.startsWith('http')));
+                else if (index <= 5) { coopHeader.classList.remove('hidden'); gridCoop.appendChild(createCard(item, "300", true)); }
                 else { corpHeader.classList.remove('hidden'); gridCorp.appendChild(createCard(item, "300", true)); }
             });
         }
@@ -423,95 +580,194 @@
             const resArea = document.getElementById('result-area');
             const loader = document.getElementById('loader-box');
             const pContainer = document.getElementById('plan-container');
-            
-            resArea.classList.remove('hidden'); 
-            loader.style.display = 'flex'; 
-            pContainer.innerHTML = '';
-            
+
+            resArea.classList.remove('hidden');
+            loader.style.display = 'flex';
+            pContainer.innerHTML = '<p class="text-center text-gray-500 font-bold animate-pulse mb-4">AIがカタログ情報を元に、最高のプランを考え中...🤖💭</p>';
+
+            // 少し待機して「考え中」を演出
+            await new Promise(r => setTimeout(r, 1500));
+
+            // 正確なタグ定義（最新の提供データに基づく）
+            // 未就学児以上: ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！"]
+            // 小学校低学年以上: ["小学生低学年", "小学生高学年", "大人も楽しみたい！"]
+            const tagDefinition = {
+                // --- 体動かす系 ---
+                "yud": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "キックdeビンゴ"],
+                "ust": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "10秒で身体が変わる"],
+                "css": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "ストラックアウト"],
+                "orgm": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "ボッチャ"],
+
+                // --- ものづくり楽しむ系 ---
+                "usk": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "キーホルダー作り"],
+                "mnm": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "ハンドメイド雑貨"],
+                "mld": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "オリジナルシール作り"],
+                "akh": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "街づくりぬり絵"],
+                "khe": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "オリジナルオイル作り"],
+                "thb": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "スライム作り"],
+                "gb": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "キャンドルトーチ作り"],
+
+                // --- 食べる系 ---
+                "pal": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "試食会"],
+                "knr": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "ジャークチキン"],
+                "369": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "野菜スープ"],
+                "lpc": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "ブラジル料理"],
+                "uop": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "串焼き"],
+                "oyk": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "お腹が空いた！美味しいもの食べたい", "お好み焼き"],
+
+                // --- 体験する／遊び系 ---
+                "mypl": ["小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "子ども記者クラブ"],
+                "szk": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "ラクガキ車"],
+                "tmp": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "ピアノ体験"],
+                "npi": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "写真撮影"],
+                "ngg": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "何かを作ったり描いたりしたい", "人形劇"],
+                "fsb": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "とにかく体を動かしたい！", "消化訓練"],
+                "fbe": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "パトカー試乗"],
+                "enn": ["未就学児（3〜5歳）", "小学生低学年", "小学生高学年", "大人も楽しみたい！", "全部楽しみたい！", "縁日でお菓子"],
+
+                // --- その他 ---
+                "yknr": ["大人も楽しみたい！", "全部楽しみたい！"],
+                "tep": ["大人も楽しみたい！", "全部楽しみたい！"],
+                "tks": ["大人も楽しみたい！", "全部楽しみたい！"],
+                "tkp": ["大人も楽しみたい！", "全部楽しみたい！"]
+            };
+
             const allActivities = [
-                { name: "車に落書きしちゃおう！", image_name: "images/car.png", description: "本物の車にお絵描き！", url: "#catalog" },
-                { name: "船橋市消防局 東消防署 模擬体験", image_name: "images/911.jpg", description: "東消防署の消防士さんと体験！", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html" },
-                { name: "パルシステム千葉", image_name: "images/pal.png", description: "こんせんくんがやってくる！", url: "pal.html" },
-                { name: "船橋の銭湯 湯どこ", image_name: "images/yud.png", description: "お風呂屋さんの体験！", url: "yud.html" },
-                { name: "スズキオート京葉", image_name: "images/szk.png", description: "車にお絵描き体験！", url: "szk.html" },
-                { name: "まいぷれ編集部", image_name: "images/mypl.png", description: "取材体験をしよう！", url: "mypl.html" },
-                ...shops.map(s => ({ name: s.name, image_name: s.img, description: s.desc, url: `${s.id}.html` })),
-                ...extra.map(e => ({ name: e.name, image_name: e.img, description: e.desc, url: e.url || `${e.id}.html` }))
+                // 特別イベント（車、消防署）
+                { id: "car-painting", name: "車に落書きしちゃおう！", image_name: "images/car.png", description: "本物の車にお絵描き体験！", url: "#catalog", tags: tagDefinition["szk"] },
+                { id: "fire-dept", name: "船橋市消防局 東消防署", image_name: "images/911.jpg", description: "消防士さんと消火体験！", url: "https://www.city.funabashi.lg.jp/shisetsu/shoubou/0002/0004/0002/p037626.html", tags: tagDefinition["fsb"] },
+
+                // ショップリスト
+                ...shops.map(s => {
+                    const tags = tagDefinition[s.id] || ["全部楽しみたい！"];
+                    const detail = tags[tags.length - 1]; // 最後に定義した具体的な活動内容
+                    return {
+                        id: s.id,
+                        name: s.name,
+                        image_name: s.img,
+                        description: (detail && detail.length > 4) ? detail : s.desc, // 具体的な活動があれば優先
+                        url: s.url || `${s.id}.html`,
+                        tags: tags
+                    };
+                }),
+
+                // エキストラリスト
+                ...extra.map(e => {
+                    const tags = tagDefinition[e.id] || ["全部楽しみたい！"];
+                    const detail = tags[tags.length - 1];
+                    return {
+                        id: e.id,
+                        name: e.name,
+                        image_name: e.img,
+                        description: (detail && detail.length > 4) ? detail : e.desc,
+                        url: e.url || `${e.id}.html`,
+                        tags: tags
+                    };
+                })
             ];
 
-            const systemPrompt = `あなたは「ココまちマルシェ」の案内人です。年齢：${age}、気分：${mood}のユーザーへ、リストから最高の3ステップをJSON形式で提案して。タイトルは短く、説明は1文（30文字以内）で！`;
-            const userQuery = `リストから3つ選んで提案してください。
-            リスト: ${JSON.stringify(allActivities)}`;
+            // 重複排除（IDベース）
+            const uniqueActivities = Array.from(new Map(allActivities.map(item => [item.id || item.name, item])).values());
 
-            try {
-                const result = await fetchWithRetry(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: userQuery }] }],
-                        generationConfig: { 
-                            responseMimeType: "application/json",
-                            responseSchema: {
-                                type: "OBJECT",
-                                properties: {
-                                    steps: {
-                                        type: "ARRAY",
-                                        items: {
-                                            type: "OBJECT",
-                                            properties: {
-                                                title: { type: "STRING" },
-                                                description: { type: "STRING" },
-                                                image_name: { type: "STRING" },
-                                                url: { type: "STRING" }
-                                            },
-                                            required: ["title", "description", "image_name", "url"]
-                                        }
-                                    }
-                                },
-                                required: ["steps"]
-                            }
-                        },
-                        systemInstruction: { parts: [{ text: systemPrompt }] }
-                    })
-                });
-                
-                const data = JSON.parse(result.candidates[0].content.parts[0].text);
-                loader.style.display = 'none';
-                
-                if (data && data.steps) {
-                    data.steps.forEach((s, i) => {
-                        const link = document.createElement('a');
-                        link.href = s.url;
-                        if (s.url.startsWith('http')) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
-                        else if (s.url === '#catalog') { link.onclick = (e) => { e.preventDefault(); switchView('shops'); }; }
+            let steps = [];
 
-                        link.className = "flex items-center gap-4 bg-white p-4 rounded-2xl border-2 border-purple-100 shadow-sm animate-float card-hover block transition-all mb-3";
-                        link.style.animationDelay = `${i * 0.2}s`;
-                        link.innerHTML = `
-                            <div class="w-16 h-16 flex-shrink-0 overflow-hidden rounded-xl bg-gray-200">
-                                <img src="${s.image_name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/200x200/eee/999?text=Go!';">
-                            </div>
-                            <div>
-                                <div class="text-[10px] font-black text-purple-400">コース ${i + 1}</div>
-                                <div class="font-black text-gray-800 text-sm leading-tight">${s.title}</div>
-                                <div class="text-[10px] text-gray-500 font-bold mt-1">${s.description}</div>
-                            </div>`;
-                        pContainer.appendChild(link);
-                    });
+            // 1. 年齢と気分による厳格なフィルタリング
+            let candidates = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && a.tags.includes(mood));
+
+            // 「美味しいもの」の場合は、食べる系以外を絶対に入れない
+            if (mood === "お腹が空いた！美味しいもの食べたい") {
+                // 追加緩和なし
+            }
+            // 「体を動かしたい」の場合
+            else if (mood === "とにかく体を動かしたい！") {
+                // 候補が少なければ、その年齢の「全部楽しみたい！」から補充
+                if (candidates.length < 3) {
+                    const backups = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && (a.tags.includes("全部楽しみたい！") || a.tags.includes("ラクガキ車")));
+                    candidates = [...new Set([...candidates, ...backups])];
                 }
-            } catch (e) { 
-                loader.style.display = 'none'; 
-                pContainer.innerHTML = "<p class='text-center font-bold text-gray-400'>通信をリトライしましたが失敗しました。もう一度押してみて！✨</p>"; 
+            }
+            // その他の気分の場合
+            else {
+                // 候補が足りない場合、その年齢の他のアクティビティから補充
+                if (candidates.length < 3) {
+                    const ageMatches = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && !a.tags.includes("お腹が空いた！美味しいもの食べたい"));
+                    candidates = [...new Set([...candidates, ...ageMatches])];
+                }
+                // それでも足りない場合は、その年齢の「全部楽しみたい！」を追加
+                if (candidates.length < 3) {
+                    const general = uniqueActivities.filter(a => a.tags && a.tags.includes(age) && a.tags.includes("全部楽しみたい！"));
+                    candidates = [...new Set([...candidates, ...general])];
+                }
+            }
+
+            // 2. 年齢による優先順位付け（フィルタリング後の候補の中から）
+            // 年齢タグが含まれているものを優先的に上位へ
+            candidates.sort((a, b) => {
+                const aHasAge = a.tags.includes(age) ? 1 : 0;
+                const bHasAge = b.tags.includes(age) ? 1 : 0;
+                return bHasAge - aHasAge;
+            });
+
+            // 3. ランダム選択（上位から候補を選ぶが、少しランダム性を持たせる）
+            // 上位5件くらいから3つ選ぶ
+            const topCandidates = candidates.slice(0, 5);
+            steps = topCandidates.sort(() => 0.5 - Math.random()).slice(0, 3).map(a => ({
+                title: a.name,
+                description: a.description,
+                image_name: a.image_name,
+                url: a.url
+            }));
+
+            // 万が一候補がゼロの場合のフェイルセーフ
+            if (steps.length === 0) {
+                steps = uniqueActivities.slice(0, 3).map(a => ({
+                    title: a.name,
+                    description: a.description,
+                    image_name: a.image_name,
+                    url: a.url
+                }));
+            }
+
+            loader.style.display = 'none';
+            pContainer.innerHTML = '';
+
+            if (steps.length > 0) {
+                // 提案メッセージ
+                const message = document.createElement('div');
+                message.className = "mb-4 text-center font-bold text-purple-600";
+                message.innerHTML = `「${age}」で「${mood}」あなたへ、<br>カタログから厳選したおすすめプランだよ！`;
+                pContainer.appendChild(message);
+
+                steps.forEach((s, i) => {
+                    const link = document.createElement('a');
+                    link.href = s.url;
+                    if (s.url.startsWith('http')) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
+                    else if (s.url === '#catalog') { link.href = "#catalog"; }
+
+                    link.className = "flex items-center gap-4 bg-white p-4 rounded-2xl border-2 border-purple-100 shadow-sm animate-float card-hover block transition-all mb-3";
+                    link.style.animationDelay = `${i * 0.2}s`;
+                    link.innerHTML = `
+                        <div class="w-16 h-16 flex-shrink-0 overflow-hidden rounded-xl bg-gray-200">
+                            <img src="${s.image_name}" class="w-full h-full object-cover" onerror="this.src='images/logo.png';">
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-black text-purple-400">Step ${i + 1}</div>
+                            <div class="font-black text-gray-800 text-sm leading-tight">${s.title}</div>
+                            <div class="text-[10px] text-gray-500 font-bold mt-1">${s.description}</div>
+                        </div>`;
+                    pContainer.appendChild(link);
+                });
+            } else {
+                pContainer.innerHTML = "<p class='text-center font-bold text-gray-400'>ごめんね、条件に合うプランが見つからなかったよ...条件を変えて試してみて！</p>";
             }
         }
 
-        const handleHashChange = () => { if (window.location.hash === '#catalog') switchView('shops'); };
-        window.addEventListener('DOMContentLoaded', handleHashChange);
-        window.addEventListener('hashchange', handleHashChange);
+        document.addEventListener('DOMContentLoaded', renderShops);
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
     </script>
 </body>
+
 </html>
