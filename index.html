@@ -675,7 +675,7 @@
                 { id: "mnm", name: "はんどめいどみんみ", img: "images/hmm.png", icon: "fa-cut", color: "blue", desc: "自分だけの特別な作品をつくろう！", category: "つくる" },
                 { id: "npi", name: "Natural Portrait", img: "images/shops/npi/1.jpg", icon: "fa-camera", color: "amber", desc: "愛犬との絆、飾らない日常を宝物の一枚に！", category: "体験・遊び" },
                 { id: "tmp", name: "田中美穂ピアノ教室", img: "images/tps.png", icon: "fa-music", color: "lime", desc: "ピアノやバイオリンなどの楽器を引いてみよう！", category: "体験・遊び" },
-                { id: "khe", name: "k＊heart", img: "shop-list/images/shops/khe/1.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "好きな香りでオリジナルオイル作り", category: "つくる" },
+                { id: "khe", name: "k＊heart", img: "images/khe.png", icon: "fa-wand-magic-sparkles", color: "pink", desc: "好きな香りでオリジナルオイル作り", category: "つくる" },
                 { id: "ust", name: "ヨガスタジオ U-studio", img: "images/ust.png", icon: "fa-person-running", color: "purple", desc: "１０秒で.腕相撲(うでずもう)が強くなる！？.身体がやわらかくなる！", category: "動かす" },
                 { id: "cko", name: "カフェ コッソリ", img: "images/shops/cko/1.png", icon: "fa-mug-saucer", color: "brown", desc: "ココロとカラダに優しいカフェです。", category: "たべる" },
             ];
@@ -765,7 +765,63 @@
             }
 
             // AIプランナーなどはそのまま維持...
+            function generatePlan() {
+                const age = document.getElementById('child-age').value;
+                const mood = document.getElementById('child-mood').value;
+                const resultArea = document.getElementById('result-area');
+                const planContainer = document.getElementById('plan-container');
+                const loaderBox = document.getElementById('loader-box');
 
+                resultArea.classList.remove('hidden');
+                loaderBox.classList.remove('hidden');
+                planContainer.innerHTML = '';
+
+                setTimeout(() => {
+                    loaderBox.classList.add('hidden');
+                    
+                    let planHtml = `
+                        <div class="bg-purple-50 p-4 rounded-xl border border-purple-100 mb-4">
+                            <h3 class="font-black text-purple-700 text-lg mb-2">✨ おすすめプラン ✨</h3>
+                            <p class="text-sm text-gray-700 font-bold mb-2">年齢: ${age} / 気分: ${mood}</p>
+                            <p class="text-gray-600 font-bold">あなたにぴったりの体験コースはこちら！</p>
+                        </div>
+                        <div class="space-y-3">
+                    `;
+
+                    const filteredShops = [...shops, ...extra].filter(shop => {
+                        if (mood.includes('動かしたい') && shop.category === '動かす') return true;
+                        if (mood.includes('作ったり') && shop.category === 'つくる') return true;
+                        if (mood.includes('食べたい') && shop.category === 'たべる') return true;
+                        if (mood.includes('全部')) return true;
+                        return false;
+                    });
+
+                    const shuffled = filteredShops.sort(() => 0.5 - Math.random());
+                    const selectedShops = shuffled.slice(0, 3);
+
+                    if(selectedShops.length === 0) {
+                        selectedShops.push(shops[0], shops[1], shops[2]);
+                    }
+
+                    selectedShops.forEach((shop, index) => {
+                        planHtml += `
+                            <div class="flex items-center bg-white p-3 rounded-xl border border-gray-200 shadow-sm">
+                                <div class="w-10 h-10 ${shop.color ? 'bg-' + shop.color + '-100 text-' + shop.color + '-500' : 'bg-purple-100 text-purple-500'} rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-xl font-bold">
+                                    ${index + 1}
+                                </div>
+                                <div>
+                                    <p class="font-black text-gray-800 text-sm">${shop.name}</p>
+                                    <p class="text-xs text-gray-500 font-bold">${shop.desc}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    planHtml += `</div>`;
+                    planContainer.innerHTML = planHtml;
+                    resultArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1500);
+            }
             document.addEventListener('DOMContentLoaded', () => {
                 // 1. ショップ描画
                 renderShops();
